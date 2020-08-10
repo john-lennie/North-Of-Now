@@ -2,6 +2,8 @@ import css from 'styled-jsx/css'
 
 export const headerStyles = css.global`
 .site-header {
+  position: relative;
+  z-index: 1;
   height: 55px;
   background: #fff;
 }
