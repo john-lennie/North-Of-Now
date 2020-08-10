@@ -25,10 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
      	// Obtain handles to buttons and other elements
      	var playpause = document.getElementById('playpause');
-     	var stop = document.getElementById('stop');
      	var mute = document.getElementById('mute');
-     	var volinc = document.getElementById('volinc');
-     	var voldec = document.getElementById('voldec');
      	var progress = document.getElementById('progress');
       var progressBar = document.getElementById('progress-bar');
      	var fullscreen = document.getElementById('fs');
@@ -57,26 +54,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-     	// Change the volume
-      var checkVolume = function(dir) {
-         if (dir) {
-            var currentVolume = Math.floor(video.volume * 10) / 10;
-            if (dir === '+') {
-               if (currentVolume < 1) video.volume += 0.1;
-            }
-            else if (dir === '-') {
-               if (currentVolume > 0) video.volume -= 0.1;
-            }
-            // If the volume has been turned off, also set it as muted
-            // Note: can only do this with the custom control set as when the 'volumechange' event is raised, there is no way to know if it was via a volume or a mute change
-            if (currentVolume <= 0) video.muted = true;
-            else video.muted = false;
-         }
-         changeButtonState('mute');
-      }
-      var alterVolume = function(dir) {
-         checkVolume(dir);
-      }
+     	// // Change the volume
+      // var checkVolume = function(dir) {
+      //    if (dir) {
+      //       var currentVolume = Math.floor(video.volume * 10) / 10;
+      //       if (dir === '+') {
+      //          if (currentVolume < 1) video.volume += 0.1;
+      //       }
+      //       else if (dir === '-') {
+      //          if (currentVolume > 0) video.volume -= 0.1;
+      //       }
+      //       // If the volume has been turned off, also set it as muted
+      //       // Note: can only do this with the custom control set as when the 'volumechange' event is raised, there is no way to know if it was via a volume or a mute change
+      //       if (currentVolume <= 0) video.muted = true;
+      //       else video.muted = false;
+      //    }
+      //    changeButtonState('mute');
+      // }
+      // var alterVolume = function(dir) {
+      //    checkVolume(dir);
+      // }
 
      	// Set the video container's fullscreen state
     	var setFullscreenData = function(state) {
@@ -148,12 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
            video.muted = !video.muted;
            changeButtonState('mute');
         });
-     		volinc.addEventListener('click', function(e) {
-     			alterVolume('+');
-     		});
-     		voldec.addEventListener('click', function(e) {
-     			alterVolume('-');
-     		});
      		fs.addEventListener('click', function(e) {
      			handleFullscreen();
      		});

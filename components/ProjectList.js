@@ -95,7 +95,7 @@ const ProjectList = ({ category, projects }) => {
           }
         </span>
       </div>
-      <div className="project-thumbs">
+      <div className={form === "long-form" ? "long-form-project-thumbs" : "short-form-project-thumbs"}>
         {projectList.map((project, index) => (
           <div className="project-thumb" key={index}>
             <div className="meta">

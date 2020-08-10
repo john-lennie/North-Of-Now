@@ -25,8 +25,6 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
 
   const client = Client()
 
-
-
   const doc = await client.query(
     Prismic.Predicates.at('document.type', 'short_form_project_page')
   ).then(res => {

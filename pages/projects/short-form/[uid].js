@@ -37,8 +37,6 @@ const Page = ({ doc, menu }) => {
                {/* <span className="button" id="stop" data-state="stop">Stop</span> */}
                <div className="floatR">
                  <span className="button" id="mute" data-state="mute">Mute/Unmute</span>
-                 <span className="button" id="volinc" data-state="volup">Vol+</span>
-                 <span className="button" id="voldec" data-state="voldown">Vol-</span>
                  <span className="button" id="fs" data-state="go-fullscreen">Fullscreen</span>
                </div>
                <div className="progress">

@@ -13,9 +13,14 @@ export const projectListStyles = css.global`
 .project-thumbs-container {
   padding: 0 20px;
 }
-.project-thumbs {
+.short-form-project-thumbs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+.long-form-project-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   grid-gap: 20px;
 }
 .project-thumb {
@@ -45,6 +50,9 @@ export const projectListStyles = css.global`
   height: 120px;
   border-radius: 2px;
   float: right;
+}
+.long-form-project-thumbs .project-img a img {
+  height: auto;
 }
 .project-img iframe {
   width: 100%;
