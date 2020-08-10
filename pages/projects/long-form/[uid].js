@@ -13,7 +13,7 @@ const Page = ({ doc, menu }) => {
       <DefaultLayout>
         <div className="page">
           <Header menu={menu} logoColor={"dark"} />
-          <p>{doc.data.title}</p>
+          {/* <p>{doc.data.title}</p> */}
         </div>
       </DefaultLayout>
     )

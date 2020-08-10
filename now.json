@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "name": "prismic-nextjs-website",
+  "name": "north-of-now-website",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
