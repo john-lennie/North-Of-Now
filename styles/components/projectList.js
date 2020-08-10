@@ -13,14 +13,9 @@ export const projectListStyles = css.global`
 .project-thumbs-container {
   padding: 0 20px;
 }
-.short-form-project-thumbs {
+.short-form-project-thumbs, .long-form-project-thumbs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
-}
-.long-form-project-thumbs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   grid-gap: 20px;
 }
 .project-thumb {
@@ -100,8 +95,11 @@ export const projectListStyles = css.global`
 
 }
 @media (min-width: 1024px) {
-  .project-thumbs {
+  .short-form-project-thumbs {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .long-form-project-thumbs {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 }
 `
