@@ -97,11 +97,11 @@ video {
 
 // below two style set the color of the progress
 .controls progress::-moz-progress-bar {
-   background-color:#fff;
+   background-color:#eee;
 }
 
 .controls progress::-webkit-progress-value {
-   background-color:#fff;
+   background-color:#eee;
 }
 
 .controls progress[data-state="fake"] {
