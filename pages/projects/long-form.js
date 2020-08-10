@@ -11,7 +11,7 @@ const LongFormPage = ({ doc, menu }) => {
       <DefaultLayout>
         <div className='homepage'>
           <Header menu={menu} logoColor={"dark"} />
-          <ProjectList category="long-form" projects={doc.data.project_list} />
+          {/* <ProjectList category="long-form" projects={doc.data.project_list} /> */}
         </div>
       </DefaultLayout>
     )
