@@ -1,6 +1,3 @@
-import css from 'styled-jsx/css'
-
-export const globals = css.global`
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -118,4 +115,3 @@ img {
     margin-bottom: 2rem;
   }
 }
-`
