@@ -2,18 +2,18 @@ import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
 .carousel-item {
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 56px);
-  opacity: 0;
-  transition: opacity .5s ease-in-out;
+  min-height: -webkit-fill-available;
 }
 .carousel-item.active {
   opacity: 1;
 }
 .carousel-item img {
-  height: 91%;
+  height: calc(91vh - 55px);
+  margin-top: 55px;
   width: 100%;
   object-fit: cover;
 }
@@ -24,6 +24,7 @@ export const homeBannerStyles = css.global`
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  background: #fff;
 }
 .carousel-caption h3 {
   font-size: 18px;
@@ -46,6 +47,7 @@ export const homeBannerStyles = css.global`
   }
   .carousel-item img {
     height: 100%;
+    margin-top: 0px;
   }
   .carousel-caption {
     position: absolute;
@@ -53,6 +55,7 @@ export const homeBannerStyles = css.global`
     bottom: 0;
     color: #fff;
     text-align: left;
+    background: none;
   }
   .carousel-caption h3 {
     font-size: 34px;

@@ -17,6 +17,11 @@ export const headerStyles = css.global`
 .short-form-page .logo-w {
   display: block;
 }
+.short-form-page .site-header {
+  position: fixed;
+  z-index: 1;
+  background: none;
+}
 .site-header .logo {
   height: 55px;
 }
