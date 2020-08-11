@@ -20,7 +20,7 @@ const Page = ({ doc, menu }) => {
           <Header menu={menu} />
           <figure id="videoContainer" data-fullscreen="false">
         		<video id="video" autoPlay loop muted playsInline>
-        			<source src="https://vod-progressive.akamaized.net/exp=1597168072~acl=%2A%2F1044330699.mp4%2A~hmac=49e5afe9d9de6a5735b0d0afaf60c8d9ddf0c5e20816d84972931507070691ee/vimeo-prod-skyfire-std-us/01/782/11/278913460/1044330699.mp4?filename=RALPH+LAUREN+%7C+CP-93.mp4" type="video/mp4" />
+        			<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
         			{/* <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
         			<source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"> */}
         			{/* <!-- Flash fallback --> */}
