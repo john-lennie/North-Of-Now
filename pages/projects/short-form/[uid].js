@@ -32,18 +32,6 @@ const Page = ({ doc, menu }) => {
         				<img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
         			</object> */}
         		</video>
-            <div id="video-controls" className="controls" data-state="hidden">
-               <span className="button" id="playpause" data-state="play">Play/Pause</span>
-               <div className="floatR">
-                 <span className="button" id="mute" data-state="mute">Mute/Unmute</span>
-                 <span className="button" id="fs" data-state="go-fullscreen">Fullscreen</span>
-               </div>
-               <div className="progress">
-                  <progress id="progress" value="0" min="0">
-                     <span id="progress-bar"></span>
-                  </progress>
-               </div>
-            </div>
         	</figure>
           <div className="short-form-project">
             <div className="meta">
@@ -58,6 +46,18 @@ const Page = ({ doc, menu }) => {
             <div className="description">
               <ClickToReveal title="Info" content={doc.data.description} />
             </div>
+          </div>
+          <div id="video-controls" className="controls" data-state="hidden">
+             <span className="button" id="playpause" data-state="play">Play/Pause</span>
+             <div className="floatR">
+               <span className="button" id="mute" data-state="mute">Mute/Unmute</span>
+               <span className="button" id="fs" data-state="go-fullscreen">Fullscreen</span>
+             </div>
+             <div className="progress">
+                <progress id="progress" value="0" min="0">
+                   <span id="progress-bar"></span>
+                </progress>
+             </div>
           </div>
         </div>
         <style jsx global>{videoPlayerStyles}</style>

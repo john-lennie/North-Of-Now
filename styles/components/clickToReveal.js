@@ -16,6 +16,6 @@ export const clickToRevealStyles = css.global`
     top: 0;
     height: auto;
     opacity: 1;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 `
