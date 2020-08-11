@@ -24,15 +24,17 @@ video {
 	margin:0;
 }
 .controls {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-	display:none;
-	list-style-type:none;
-	overflow:hidden;
-	background:transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    list-style-type: none;
+    overflow: hidden;
+    background: transparent;
+    border-top: 1px solid #ffffff1a;
+    backdrop-filter: blur(5px) brightness(100%);
 }
 .controls li {
 	float:left;
@@ -149,5 +151,11 @@ figure[data-fullscreen=true] .controls li {
 }
 figure[data-fullscreen=true] .controls .progress {
 	width:68%;
+}
+@media (min-width: 768px) {
+  .controls {
+      border-top: none;
+      backdrop-filter: none;
+  }
 }
 `

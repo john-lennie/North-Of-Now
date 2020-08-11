@@ -60,11 +60,7 @@ export const projectListStyles = css.global`
   color: #fff;
   display: grid;
   grid-gap: 20px 0px;
-  padding: 55px 20px;
-}
-.short-form-project .meta, .short-form-project .video {
-  width: 100%;
-  margin-bottom: 20px;
+  padding: 55px 20px 75px;
 }
 .short-form-project .meta p {
   margin-bottom: 20px;
