@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import DefaultLayout from 'layouts'
-import { Header, SliceZone } from 'components'
+import { Header, ClickToReveal } from 'components'
 import { queryRepeatableDocuments } from 'utils/queries'
 import { Client } from 'utils/prismicHelpers'
 import { projectListStyles, videoPlayerStyles } from 'styles'
@@ -20,7 +20,7 @@ const Page = ({ doc, menu }) => {
           <Header menu={menu} />
           <figure id="videoContainer" data-fullscreen="false">
         		<video id="video" autoPlay loop muted playsInline>
-        			<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+        			<source src="https://vod-progressive.akamaized.net/exp=1597168072~acl=%2A%2F1044330699.mp4%2A~hmac=49e5afe9d9de6a5735b0d0afaf60c8d9ddf0c5e20816d84972931507070691ee/vimeo-prod-skyfire-std-us/01/782/11/278913460/1044330699.mp4?filename=RALPH+LAUREN+%7C+CP-93.mp4" type="video/mp4" />
         			{/* <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
         			<source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"> */}
         			{/* <!-- Flash fallback --> */}
@@ -34,7 +34,6 @@ const Page = ({ doc, menu }) => {
         		</video>
             <div id="video-controls" className="controls" data-state="hidden">
                <span className="button" id="playpause" data-state="play">Play/Pause</span>
-               {/* <span className="button" id="stop" data-state="stop">Stop</span> */}
                <div className="floatR">
                  <span className="button" id="mute" data-state="mute">Mute/Unmute</span>
                  <span className="button" id="fs" data-state="go-fullscreen">Fullscreen</span>
@@ -46,27 +45,20 @@ const Page = ({ doc, menu }) => {
                </div>
             </div>
         	</figure>
-
-          {/* <div className="container">
-            <div className="short-form-project">
-              <div className="meta">
-                <p>Back</p>
-                <p className="title fw500">{doc.data.title}</p>
-                <p><span className="grey">Date</span> <span className="fw500">{doc.data.date}</span></p>
-                <p><span className="grey">Type</span> <span className="fw500">{doc.data.type}</span></p>
-              </div>
-              <div className="video" dangerouslySetInnerHTML={{ __html: RichText.asText(doc.data.vimeo_embed_code) }}></div>
-              <div className="description">
-                {doc.data.description.map((element, index) => (
-                  <p key={index}>{element.paragraph}</p>
-                ))}
-                <p className="fw500">Credits:</p>
-                <p><span className="grey">Directed By</span> <span className="fw500">{doc.data.credits[0].directed_by}</span><br/>
-                   <span className="grey">Produced By</span> <span className="fw500">{doc.data.credits[0].produced_by}</span>
-                </p>
-              </div>
+          <div className="short-form-project">
+            <div className="meta">
+              <p className="title fw500">{doc.data.title}</p>
+              <p><span className="fw500">Date:</span> {doc.data.date}</p>
+              <p><span className="fw500">Type:</span> {doc.data.type}</p>
+              <p className="fw500">Credits:</p>
+              <p>Directed By: <span className="fw500">{doc.data.credits[0].directed_by}</span><br/>
+                 Produced By: <span className="fw500">{doc.data.credits[0].produced_by}</span>
+              </p>
             </div>
-          </div> */}
+            <div className="description">
+              <ClickToReveal title="Info" content={doc.data.description} />
+            </div>
+          </div>
         </div>
         <style jsx global>{videoPlayerStyles}</style>
         <style jsx global>{projectListStyles}</style>

@@ -1,6 +1,7 @@
+export { default as ClickToReveal } from './ClickToReveal'
 export { default as DocLink } from './DocLink'
 export { default as Header } from './Header'
 export { default as HomeBanner } from './HomeBanner'
-export { default as ProjectList } from './ProjectList'
 export { default as Footer } from './Footer'
 export { SliceZone } from './slices'
+export { default as ProjectList } from './ProjectList'

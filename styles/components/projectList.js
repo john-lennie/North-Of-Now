@@ -55,29 +55,33 @@ export const projectListStyles = css.global`
 .project-video {
   width: 50%;
 }
+.short-form-project {
+  position: relative;
+  color: #fff;
+  display: grid;
+  grid-gap: 20px 0px;
+  padding: 55px 20px;
+}
 .short-form-project .meta, .short-form-project .video {
   width: 100%;
   margin-bottom: 20px;
+}
+.short-form-project .meta p {
+  margin-bottom: 20px;
+}
+.short-form-project .meta p:last-child {
+  margin-bottom: 0px;
 }
 .short-form-project .meta p.title {
     font-size: 24px;
     line-height: 1.4em;
 }
 @media (min-width: 768px) {
-  .short-form-project {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-rows: max-content;
-    grid-gap: 20px 0px;
-    padding-top: 35px;
-  }
   .short-form-project .meta, .short-form-project .video {
     margin-bottom: 0px;
   }
   .short-form-project .meta, .short-form-project .description {
-    width: 65%;
-    padding-right: 20px;
-    box-sizing: border-box;
+    width: 33.33%;
   }
   .short-form-project .video {
     grid-row-start: 1;
