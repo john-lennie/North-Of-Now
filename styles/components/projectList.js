@@ -21,6 +21,11 @@ export const projectListStyles = css.global`
 .project-thumb {
   display: flex;
 }
+.project-thumb .meta {
+  width: 50%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
 .meta p.title {
   text-transform: capitalize;
   margin-bottom: 10px;
