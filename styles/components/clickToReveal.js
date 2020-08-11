@@ -8,7 +8,7 @@ export const clickToRevealStyles = css.global`
   }
   .ctr-desc.hidden {
     opacity: 0;
-    top: -5px;
+    top: -10px;
   }
   .ctr-desc {
     position: relative;
