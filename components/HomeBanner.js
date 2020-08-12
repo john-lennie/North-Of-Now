@@ -12,7 +12,7 @@ const HomeBanner = ({ slides }) => (
         <Carousel.Item key={index}>
           <img
             src={slide.image.url}
-            alt="First slide"
+            alt="slide"
           />
           <Carousel.Caption>
             <h3>{slide.title}</h3>

@@ -84,7 +84,7 @@ video {
 .controls progress {
    display:block;
    width:100%;
-   height:3px;
+   height:5px;
    margin-top:0.125rem;
    border:none;
    -moz-border-radius:2px;

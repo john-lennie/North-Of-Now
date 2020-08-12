@@ -6,7 +6,9 @@ export const homeBannerStyles = css.global`
   top: 0;
   display: flex;
   flex-direction: column;
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 .carousel-item.active {
   opacity: 1;
