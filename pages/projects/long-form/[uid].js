@@ -11,9 +11,14 @@ const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
       <DefaultLayout>
-        <div className="page">
-          <Header menu={menu} logoColor={"dark"} />
-          {/* <p>{doc.data.title}</p> */}
+        <div className="long-form-page">
+          <Header menu={menu} />
+          <div className="poster">
+            <img
+              src={doc.data.thumbnail.url}
+              alt={doc.data.thumbnail.alt}
+            />
+          </div>
         </div>
       </DefaultLayout>
     )

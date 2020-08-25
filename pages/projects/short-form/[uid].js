@@ -20,7 +20,7 @@ const Page = ({ doc, menu }) => {
           <Header menu={menu} />
           <figure id="videoContainer" data-fullscreen="false">
         		<video id="video" autoPlay loop muted playsInline>
-        			<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
+        			<source src={doc.data.vimeo_mp4_url} type="video/mp4" />
         			{/* <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
         			<source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"> */}
         			{/* <!-- Flash fallback --> */}

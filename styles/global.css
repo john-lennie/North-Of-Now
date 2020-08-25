@@ -94,6 +94,21 @@ img {
   float: right;
 }
 
+main {
+  min-height: calc(100vh - 79px);
+}
+
+.poster {
+  position: fixed;
+  right: 0;
+  height: 100vw;
+}
+
+.poster img {
+  height: 100vh;
+  object-fit: contain;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 20px;

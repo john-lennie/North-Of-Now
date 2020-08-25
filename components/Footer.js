@@ -3,26 +3,14 @@ import { footerStyles } from 'styles'
 
 const Footer = () => (
   <footer>
-    <p>
-      Proudly published with &nbsp;
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Prismic</a>
-      <br />
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          className="footer-logo"
-          src="/images/logo-prismic.svg"
-          alt="Gray Prismic logo"
-        />
-      </a>
-    </p>
+    <div className="footer-left">
+      <img className="logo" src="/logo-b.png" alt="North of Now"/><br/>
+      North Of Now Films
+    </div>
+    <div className="footer-right">
+      @northofnowfilms<br/>
+      info@northofnow.com
+    </div>
     <style jsx global>{footerStyles}</style>
   </footer>
 )

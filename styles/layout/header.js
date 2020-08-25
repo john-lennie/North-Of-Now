@@ -13,6 +13,9 @@ export const headerStyles = css.global`
 .short-form-page .site-header a {
   color: #fff;
 }
+.logo-w {
+  display: none;
+}
 .short-form-page .logo-b {
   display: none;
 }
@@ -28,11 +31,10 @@ export const headerStyles = css.global`
   height: 55px;
 }
 .site-header .logo img {
-  max-height: 100%;
+  height: 19px;
+  margin: 18px;
 }
-.logo-w {
-  display: none;
-}
+
 .site-header,
 .site-header a {
   color: #000;
