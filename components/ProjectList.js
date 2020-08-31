@@ -68,32 +68,33 @@ const ProjectList = ({ category, projects }) => {
     <div className="container">
       <div className="filterBy">
         Filter By:
-        <span className="filterByDate">
-          <span className="grey">Year</span>
-          <select onChange={handleDateChange}>
-            <option value="All">All</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-          </select>
-        </span>
-        <span className="filterByType">
-          <span className="grey">Type</span>
-          {
-            form =="long-form" ? (
-              <select onChange={handleTypeChange}>
-                <option value="All">All</option>
-                <option value="Documentary">Documentary</option>
-              </select>
-            ) : (
-              <select onChange={handleTypeChange}>
-                <option value="All">All</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Music Video">Music Video</option>
-              </select>
-            )
-          }
-        </span>
+        <span className="floatR">
+          <span className="filterByDate">
+            <span className="grey">Year</span>
+            <select onChange={handleDateChange}>
+              <option value="All">All</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+            </select>
+          </span>
+          <span className="filterByType">
+            <span className="grey">Type</span>
+            {
+              form =="long-form" ? (
+                <select onChange={handleTypeChange}>
+                  <option value="All">All</option>
+                  <option value="Documentary">Documentary</option>
+                </select>
+              ) : (
+                <select onChange={handleTypeChange}>
+                  <option value="All">All</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Music Video">Music Video</option>
+                </select>
+              )
+            }
+          </span></span>
       </div>
       <div className={form === "long-form" ? "long-form-project-thumbs" : "short-form-project-thumbs"}>
         {projectList.map((project, index) => (

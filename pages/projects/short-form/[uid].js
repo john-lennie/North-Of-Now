@@ -33,9 +33,9 @@ const Page = ({ doc, menu }) => {
         			</object> */}
         		</video>
         	</figure>
-          <div className="short-form-project">
+          <div className="container short-form-project">
             <div className="meta">
-              <p className="title fw500">{doc.data.title}</p>
+              <h1>{doc.data.title}</h1>
               <p><span className="fw500">Date:</span> {doc.data.date}</p>
               <p><span className="fw500">Type:</span> {doc.data.type}</p>
               <p className="fw500">Credits:</p>

@@ -19,6 +19,9 @@ export const linkResolver = (doc) => {
   if (doc.uid === 'long-form') {
     return `/projects/long-form`
   }
+  if (doc.uid === 'still') {
+    return `/projects/still`
+  }
   return '/'
 }
 
@@ -32,6 +35,9 @@ export const hrefResolver = (doc) => {
   }
   if (doc.uid === 'long-form') {
     return `/projects/long-form`
+  }
+  if (doc.uid === 'still') {
+    return `/projects/still`
   }
   return '/'
 }

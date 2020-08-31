@@ -20,7 +20,7 @@ body {
   line-height: 1.4em;
 }
 a {
-  color: #72767B;
+  color: #000;
   line-height: 28px;
   text-decoration: none;
 }
@@ -31,12 +31,9 @@ h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 42px;
-  font-weight: normal;
-  line-height: 52px;
-  letter-spacing : 1.14;
-  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: 24px;
+  line-height: 1.4em;
 }
 h2, h2 a {
   margin-bottom: 1rem;
@@ -76,10 +73,17 @@ img {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 .container {
-  padding: 0 20px;
+  padding: 20px;
 }
+
+main {
+  min-height: calc(100vh - 79px);
+}
+
+/* specific style classes */
+
 .grey {
-  color: #000;
+  color: #999;
 }
 .pad-10 {
   padding: 10px;
@@ -93,40 +97,9 @@ img {
 .floatR {
   float: right;
 }
-
-main {
-  min-height: calc(100vh - 79px);
+.ta-l {
+  text-align: left;
 }
-
-.poster {
-  position: fixed;
-  right: 0;
-  height: 100vw;
-}
-
-.poster img {
-  height: 100vh;
-  object-fit: contain;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  .content-section {
-    margin-bottom: 2rem;
-  }
+.ta-r {
+  text-align: right;
 }

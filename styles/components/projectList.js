@@ -58,15 +58,9 @@ export const projectListStyles = css.global`
 .short-form-project {
   position: relative;
   color: #fff;
-  display: grid;
-  grid-gap: 20px 0px;
-  padding: 55px 20px 75px;
 }
 .short-form-project .meta p {
   margin-bottom: 20px;
-}
-.short-form-project .meta p:last-child {
-  margin-bottom: 0px;
 }
 .short-form-project .meta p.title {
     font-size: 24px;

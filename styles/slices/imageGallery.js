@@ -1,37 +1,70 @@
 import css from 'styled-jsx/css'
 
 export const imageGalleryStyles = css.global`
-.gallery {
-  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;  /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+.carousel-item {
+  position: fixed;
+  top: 0;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between; 
-  justify-content: space-between; 
+  flex-direction: column;
+  height: -webkit-fill-available;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
-.gallery-item {
-  -webkit-box-flex: 0 1 48%;
-  -moz-box-flex:  0 1 48%;
-  -webkit-flex:  0 1 48%;
-  -ms-flex:  0 1 48%;
-  flex: 0 1 48%;
+.carousel-item.active {
+  opacity: 1;
 }
-.gallery-link {
-  margin-top: -20px;
-  text-transform: uppercase;
+.carousel-item img {
+  height: calc(91vh - 55px);
+  margin-top: 55px;
+  width: 100%;
+  object-fit: contain;
 }
-.gallery img {
-  margin-bottom: 1rem;
+.carousel-caption {
+  flex-grow: 2;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background: #fff;
 }
-@media (max-width: 767px) {
-  .gallery-item {
-    -webkit-box-flex: 100%;
-    -moz-box-flex:  100%;
-    -webkit-flex:  100%;
-    -ms-flex:  100%;
-    flex: 100%;
+.carousel-caption h3 {
+  font-size: 18px;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+.carousel-caption p {
+  font-size: 12px;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+@media (min-width: 1024px) {
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+  }
+  .carousel-item img {
+    height: 100%;
+    margin-top: 0px;
+  }
+  .carousel-caption {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    color: #fff;
+    text-align: left;
+    background: none;
+  }
+  .carousel-caption h3 {
+    font-size: 34px;
+    line-height: 1.4em;
+  }
+  .carousel-caption p {
+    font-size: 20px;]
   }
 }
 `

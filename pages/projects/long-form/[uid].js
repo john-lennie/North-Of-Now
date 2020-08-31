@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DefaultLayout from 'layouts'
-import { Header, SliceZone } from 'components'
+import { Header, ClickToReveal } from 'components'
 
 import { queryRepeatableDocuments } from 'utils/queries'
 
@@ -13,12 +13,19 @@ const Page = ({ doc, menu }) => {
       <DefaultLayout>
         <div className="long-form-page">
           <Header menu={menu} />
-          <div className="poster">
-            <img
-              src={doc.data.thumbnail.url}
-              alt={doc.data.thumbnail.alt}
-            />
-          </div>
+          <img
+            src={doc.data.thumbnail.url}
+            alt={doc.data.thumbnail.alt}
+          />
+          <div className="container">
+            <h1>{doc.data.title}</h1>
+            <p className="grey">{doc.data.type}</p>
+            <p>{doc.data.description}</p>
+            <p>Full Summary</p>
+            <p>Credits</p>
+            {/* <ClickToReveal title="Full Summary" content="vev" />
+            <ClickToReveal title="Credits" content="vev" /> */}
+        </div>
         </div>
       </DefaultLayout>
     )
