@@ -1,22 +1,54 @@
 import css from 'styled-jsx/css'
 
 export const imageGalleryStyles = css.global`
+.carousel {
+  position: relative;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+}
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    flex-grow: 1;
+    height: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .1;
+}
+.carousel-indicators .active {
+    opacity: 1;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 .carousel-item {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  height: -webkit-fill-available;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
   opacity: 0;
-  transition: all 1s ease-in-out;
 }
 .carousel-item.active {
   opacity: 1;
 }
 .carousel-item img {
-  height: calc(91vh - 55px);
-  margin-top: 55px;
-  width: 100%;
   object-fit: contain;
 }
 .carousel-caption {

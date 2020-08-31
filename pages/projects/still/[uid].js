@@ -15,20 +15,23 @@ const Page = ({ doc, menu }) => {
     return (
       <DefaultLayout>
           <Header menu={menu} />
-          <Carousel fade={true} pause={false} controls={false} indicators={false} interval={9000}>
-            {doc.data.images.map((image, index) => (
-              <Carousel.Item key={index}>
-                <img
-                  src={image.image.url}
-                  alt="image"
-                />
-                {/* <Carousel.Caption>
-                  <h3>{image.title}</h3>
-                  <p>{image.sub_title}</p>
-                </Carousel.Caption> */}
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          <div className="container">
+            <h1>{doc.data.title}</h1>
+            <Carousel fade={true} pause={false} controls={false} interval={5000}>
+              {doc.data.images.map((image, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    src={image.image.url}
+                    alt="image"
+                  />
+                  {/* <Carousel.Caption>
+                    <h3>{image.title}</h3>
+                    <p>{image.sub_title}</p>
+                  </Carousel.Caption> */}
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
           <style jsx global>{imageGalleryStyles}</style>
       </DefaultLayout>
     )
