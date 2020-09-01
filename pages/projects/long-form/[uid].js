@@ -11,21 +11,20 @@ const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
       <DefaultLayout>
-        <div className="long-form-page">
+        <div className="container">
           <Header menu={menu} />
           <img
+            className="poster"
             src={doc.data.thumbnail.url}
             alt={doc.data.thumbnail.alt}
           />
-          <div className="container">
-            <h1>{doc.data.title}</h1>
-            <p className="grey">{doc.data.type}</p>
-            <p>{doc.data.description}</p>
-            <p>Full Summary</p>
-            <p>Credits</p>
-            {/* <ClickToReveal title="Full Summary" content="vev" />
-            <ClickToReveal title="Credits" content="vev" /> */}
-        </div>
+          <h1>{doc.data.title}</h1>
+          <p className="grey">{doc.data.type}</p>
+          <p>{doc.data.description}</p>
+          <p>Full Summary</p>
+          <p>Credits</p>
+          {/* <ClickToReveal title="Full Summary" content="vev" />
+          <ClickToReveal title="Credits" content="vev" /> */}
         </div>
       </DefaultLayout>
     )

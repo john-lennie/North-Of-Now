@@ -3,6 +3,7 @@ import css from 'styled-jsx/css'
 export const imageGalleryStyles = css.global`
 .carousel {
   position: relative;
+  margin-bottom: 40px;
 }
 .carousel-indicators {
     position: absolute;
@@ -19,7 +20,7 @@ export const imageGalleryStyles = css.global`
     box-sizing: content-box;
     flex: 0 1 auto;
     flex-grow: 1;
-    height: 2px;
+    height: 1px;
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
@@ -74,6 +75,12 @@ export const imageGalleryStyles = css.global`
 
 }
 @media (min-width: 1024px) {
+  .carousel {
+    height: calc(100vh - 115px);
+  }
+  .carousel-inner {
+    height: 100%;
+}
   .carousel-item {
     position: absolute;
     top: 0;
@@ -81,6 +88,7 @@ export const imageGalleryStyles = css.global`
   }
   .carousel-item img {
     height: 100%;
+    width: 100%;
     margin-top: 0px;
   }
   .carousel-caption {

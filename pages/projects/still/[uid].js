@@ -16,7 +16,6 @@ const Page = ({ doc, menu }) => {
       <DefaultLayout>
           <Header menu={menu} />
           <div className="container">
-            <h1>{doc.data.title}</h1>
             <Carousel fade={true} pause={false} controls={false} interval={5000}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>
@@ -31,6 +30,10 @@ const Page = ({ doc, menu }) => {
                 </Carousel.Item>
               ))}
             </Carousel>
+            <h1>{doc.data.title}</h1>
+            <p><span className="fw500">Creative Direction:</span> Creative Director</p>
+            <p><span className="fw500">Photography:</span> Photographer</p>
+            <p><span className="fw500">Stylist:</span> Stylist</p>
           </div>
           <style jsx global>{imageGalleryStyles}</style>
       </DefaultLayout>

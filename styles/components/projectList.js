@@ -66,6 +66,7 @@ export const projectListStyles = css.global`
     font-size: 24px;
     line-height: 1.4em;
 }
+
 @media (min-width: 768px) {
   .short-form-project .meta, .short-form-project .video {
     margin-bottom: 0px;
@@ -82,6 +83,10 @@ export const projectListStyles = css.global`
     padding: 20px;
   }
   .filterBy {
+    position: fixed;
+    right: 20px;
+    top: 17px;
+    z-index: 2;
     text-align: right;
   }
 }

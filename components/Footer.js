@@ -5,7 +5,7 @@ const Footer = () => (
   <footer>
     <div className="footer-left">
       <img className="logo" src="/logo-b.png" alt="North of Now"/><br/>
-      North Of Now Films
+      North Of Now Productions
     </div>
     <div className="footer-right">
       @northofnowfilms<br/>

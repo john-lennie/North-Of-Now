@@ -80,6 +80,11 @@ main {
   min-height: calc(100vh - 79px);
 }
 
+.poster {
+  max-height: 400px;
+  margin-bottom: 20px;
+}
+
 /* specific style classes */
 
 .grey {
@@ -102,4 +107,12 @@ main {
 }
 .ta-r {
   text-align: right;
+}
+
+@media (min-width: 768px) {
+
+.container {
+    padding: 80px 20px;
+}
+
 }
