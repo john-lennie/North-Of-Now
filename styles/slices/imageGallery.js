@@ -71,6 +71,24 @@ export const imageGalleryStyles = css.global`
   line-height: 1em;
   margin-bottom: 5px;
 }
+.carousel-control-prev {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
@@ -90,24 +108,6 @@ export const imageGalleryStyles = css.global`
     height: 100%;
     width: 100%;
     margin-top: 0px;
-  }
-  .carousel-control-prev {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-  }
-  .carousel-control-next {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
   }
   .carousel-caption {
     position: absolute;
