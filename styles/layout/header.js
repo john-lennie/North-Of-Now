@@ -8,6 +8,9 @@ export const headerStyles = css.global`
   background: #fff;
   border-bottom: 1px solid #7f7f7f63;
 }
+.homepage .site-header {
+  background: none;
+}
 .homepage .site-header a {
   color: #000;
 }
