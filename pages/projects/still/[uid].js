@@ -16,7 +16,7 @@ const Page = ({ doc, menu }) => {
       <DefaultLayout>
           <Header menu={menu} />
           <div className="container">
-            <Carousel fade={true} pause={false} controls={false} interval={5000}>
+            <Carousel fade={true} pause={false} interval={5000} nextLabel={''} prevLabel={''}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>
                   <img

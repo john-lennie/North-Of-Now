@@ -91,6 +91,24 @@ export const imageGalleryStyles = css.global`
     width: 100%;
     margin-top: 0px;
   }
+  .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .carousel-control-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   .carousel-caption {
     position: absolute;
     padding: 20px;
