@@ -6,7 +6,7 @@ export const headerStyles = css.global`
   z-index: 1;
   height: 55px;
   background: #fff;
-  border-bottom: 1px solid #7f7f7f63;
+  border-bottom: 1px solid #0000000f;
 }
 .homepage .site-header {
   background: none;
