@@ -11,13 +11,20 @@ const ShortFormPage = ({ doc, menu }) => {
     return (
       <DefaultLayout>
         <Header menu={menu} logoColor={"dark"} />
-        <div className="container">{doc.results.map((result, index) => (
-            <div key={index}>
+        <div className="container still-page">
+          {doc.results.map((result, index) => (
+            <div className="gal-links" key={index}>
               <DocLink link={ `/projects/still/${result.uid}` }>
-              {result.data.title}
+              <img
+                className="gal-link"
+                src={result.data.images[0].image.url}
+                alt={result.data.images[0].image.alt}
+              />
+              <p>{result.data.title}</p>
             </DocLink>
             </div>
-          ))}</div>
+          ))}
+        </div>
       </DefaultLayout>
     )
   }

@@ -85,6 +85,22 @@ main {
   margin-bottom: 20px;
 }
 
+.still-page {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 160px);
+}
+
+.gal-links {
+  margin-right: 20px;
+}
+
+.gal-link {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
 /* specific style classes */
 
 .grey {
