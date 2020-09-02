@@ -20,6 +20,7 @@ const ShortFormPage = ({ doc, menu }) => {
                 src={result.data.images[0].image.url}
                 alt={result.data.title}
               />
+              <h1>{result.data.title}</h1>
             </DocLink>
             </div>
           ))}

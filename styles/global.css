@@ -93,11 +93,14 @@ main {
 }
 
 .gal-links {
-  margin: 0 20px 20px;
+  margin: 0 0 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .gal-link {
-  width: 300px;
+  width: 500px;
   height: auto;
 }
 
