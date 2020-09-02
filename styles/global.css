@@ -88,17 +88,17 @@ main {
 .still-page {
   display: flex;
   align-items: center;
-  height: calc(100vh - 160px);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .gal-links {
-  margin-right: 20px;
+  margin: 0 20px 20px;
 }
 
 .gal-link {
   width: 300px;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
 }
 
 /* specific style classes */

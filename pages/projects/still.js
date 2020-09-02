@@ -18,9 +18,8 @@ const ShortFormPage = ({ doc, menu }) => {
               <img
                 className="gal-link"
                 src={result.data.images[0].image.url}
-                alt={result.data.images[0].image.alt}
+                alt={result.data.title}
               />
-              <p>{result.data.title}</p>
             </DocLink>
             </div>
           ))}
