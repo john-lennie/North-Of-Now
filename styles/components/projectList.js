@@ -26,8 +26,7 @@ export const projectListStyles = css.global`
   padding-right: 20px;
   box-sizing: border-box;
 }
-.meta p.title {
-  text-transform: capitalize;
+.meta h2.title {
   margin-bottom: 10px;
 }
 .meta p {
@@ -55,26 +54,26 @@ export const projectListStyles = css.global`
 .project-video {
   width: 50%;
 }
-.short-form-project {
+#short-form-project {
   position: relative;
   color: #fff;
+  display: inline-block;
+  width: 33%;
+  transition: opacity 0.7s ease-in-out;
 }
-.short-form-project .meta p {
+#short-form-project .meta p {
   margin-bottom: 20px;
 }
-.short-form-project .meta p.title {
+#short-form-project .meta p.title {
     font-size: 24px;
     line-height: 1.4em;
 }
 
 @media (min-width: 768px) {
-  .short-form-project .meta, .short-form-project .video {
+  #short-form-project .meta, #short-form-project .video {
     margin-bottom: 0px;
   }
-  .short-form-project .meta, .short-form-project .description {
-    width: 33.33%;
-  }
-  .short-form-project .video {
+  #short-form-project .video {
     grid-row-start: 1;
     grid-row-end: span 2;
     grid-column-start: 2;

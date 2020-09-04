@@ -100,7 +100,7 @@ const ProjectList = ({ category, projects }) => {
         {projectList.map((project, index) => (
           <div className="project-thumb" key={index}>
             <div className="meta">
-              <p className="title fw500">{project.data.title}</p>
+              <h2 className="title">{project.data.title}</h2>
               <p><span className="grey">Date:</span> {project.data.date}</p>
               <p><span className="grey">Type:</span> {project.data.type}</p>
             </div>

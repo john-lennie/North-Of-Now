@@ -6,7 +6,6 @@ export const headerStyles = css.global`
   z-index: 1;
   height: 55px;
   background: #fff;
-  border-bottom: 1px solid #0000000f;
 }
 .homepage .site-header {
   background: none;
@@ -40,6 +39,8 @@ export const headerStyles = css.global`
 .site-header a {
   color: #000;
   height: 55px;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 55px;
 }
 .site-header a {

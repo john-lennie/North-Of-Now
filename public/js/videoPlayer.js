@@ -2,6 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   (function () {
     'use strict';
 
+    var infoText = document.getElementById('short-form-project');
+    var timeout;
+
+    setTimeout(function(){
+      infoText.classList.toggle("hidden");
+    }, 5000);
+
+    document.addEventListener('mousemove', e => {
+      clearTimeout(timeout);
+      // if hidden show right away, when visible hide after x seconds
+      if (infoText.classList.contains('hidden')) {
+        infoText.classList.toggle("hidden");
+      } else {
+        timeout = setTimeout(function(){
+          infoText.classList.toggle("hidden");
+        }, 5000);
+      }
+    });
+
     // Does the browser actually support the video element?
     var supportsVideo = !!document.createElement('video').canPlayType;
 
