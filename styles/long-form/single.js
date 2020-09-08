@@ -4,6 +4,7 @@ export const longFormSingleStyles = css.global`
 .poster img {
   max-width: 100%;
   max-height: 100vh;
+  box-shadow: 0px 4px 10px #00000091;
 }
 .infoLeft p:last-child {
   margin-bottom: 0;
@@ -54,7 +55,8 @@ export const longFormSingleStyles = css.global`
   }
   .poster img {
     max-width: calc(40vw - 40px);
-    max-height: calc(100vh - 134px);
+    max-height: calc(100vh - 200px);
+  }
   }
   footer {
     width: calc(60% - 41px);
