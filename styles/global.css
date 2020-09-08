@@ -67,11 +67,6 @@ main {
   opacity: 0;
 }
 
-.poster {
-  max-height: 400px;
-  margin-bottom: 20px;
-}
-
 .still-page {
   display: flex;
   align-items: center;
@@ -106,6 +101,9 @@ main {
 .pad-20 {
   padding: 20px;
 }
+.pad-30 {
+  padding: 30px;
+}
 .fw500 {
   font-weight: 500;
 }
@@ -118,11 +116,14 @@ main {
 .ta-r {
   text-align: right;
 }
+.td-u {
+  text-decoration: underline;
+}
 
 @media (min-width: 768px) {
 
 .container {
-    padding: 80px 20px;
+    padding: 110px 30px;
 }
 
 }

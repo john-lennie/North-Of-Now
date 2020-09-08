@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'
 
 export const projectListStyles = css.global`
 .filterBy {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .filterBy .grey {
   margin-right: 10px;
@@ -83,8 +83,8 @@ export const projectListStyles = css.global`
   }
   .filterBy {
     position: fixed;
-    right: 20px;
-    top: 17px;
+    right: 30px;
+    top: 30px;
     z-index: 2;
     text-align: right;
   }

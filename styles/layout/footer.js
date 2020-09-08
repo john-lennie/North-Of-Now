@@ -6,7 +6,7 @@ footer {
   align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
-  displa
+  border-top: 1px solid #8989893d;
 }
 .footer-left .logo {
   height: 19px;

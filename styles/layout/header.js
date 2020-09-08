@@ -6,6 +6,7 @@ export const headerStyles = css.global`
   z-index: 1;
   height: 55px;
   background: #fff;
+  border-bottom: 1px solid #8989893d;
 }
 .homepage .site-header {
   background: none;
@@ -33,15 +34,14 @@ export const headerStyles = css.global`
 }
 .site-header .logo img {
   height: 19px;
-  margin: 18px;
+  margin: 30px;
 }
 
 .site-header a {
   color: #000;
-  height: 55px;
   font-weight: 600;
   font-size: 14px;
-  line-height: 55px;
+  line-height: 79px;
 }
 .site-header a {
   display: inline-block;
@@ -68,8 +68,9 @@ export const headerStyles = css.global`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
+    height: 79px;
     background: #fff;
   }
   .homepage .logo-w {

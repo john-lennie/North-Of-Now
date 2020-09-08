@@ -2,30 +2,55 @@ import React from 'react'
 
 import DefaultLayout from 'layouts'
 import { Header, ClickToReveal } from 'components'
-
+import { longFormSingleStyles } from 'styles'
 import { queryRepeatableDocuments } from 'utils/queries'
-
+import Carousel from 'react-bootstrap/Carousel'
 import { Client } from 'utils/prismicHelpers'
 
 const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
       <DefaultLayout>
-        <div className="container">
           <Header menu={menu} />
-          <img
-            className="poster"
-            src={doc.data.thumbnail.url}
-            alt={doc.data.thumbnail.alt}
-          />
-          <h1>{doc.data.title}</h1>
-          <p className="grey">{doc.data.type}</p>
-          <p>{doc.data.description}</p>
-          <p>Full Summary</p>
-          <p>Credits</p>
-          {/* <ClickToReveal title="Full Summary" content="vev" />
-          <ClickToReveal title="Credits" content="vev" /> */}
-        </div>
+          <div className="poster">
+            <img
+              src={doc.data.thumbnail.url}
+              alt={doc.data.thumbnail.alt}
+            />
+          </div>
+          <div className="infoLeft">
+            <div className="pad-30"><h1>{doc.data.title}</h1>
+              <p className="grey">{doc.data.type}</p>
+              <p>{doc.data.description}</p>
+              <p>Full Summary</p>
+              <p>Credits</p>
+              {/* <ClickToReveal title="Full Summary" content="vev" />
+              <ClickToReveal title="Credits" content="vev" /> */}</div>
+            <div className="articles">
+              <p>Oscar winner and musician Common teams up with Drew Brees and Tony Parker for boxing documentary ‘They Fight’<br/>
+              LOS ANGELES TIMES</p>
+              <p>Watch the trailer for fox sports films’ ‘they fight’ documentary produced by Common<br/>
+              THE SOURCE</p>
+              <p>FOX Sports Films’ “They Fight” Film Re-Airs on FS1, Continues NYC/LA Theater Run This Week<br/>
+              FOX SPORTS</p>
+              <p className="td-u">MORE ARTICLES</p>
+            </div>
+            <Carousel fade={true} pause={false} interval={5000} nextLabel={''} prevLabel={''}>
+              {doc.data.images.map((image, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    src={image.image.url}
+                    alt="image"
+                  />
+                  {/* <Carousel.Caption>
+                    <h3>{image.title}</h3>
+                    <p>{image.sub_title}</p>
+                  </Carousel.Caption> */}
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
+        <style jsx global>{longFormSingleStyles}</style>
       </DefaultLayout>
     )
   }

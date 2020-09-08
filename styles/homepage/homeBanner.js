@@ -38,6 +38,12 @@ export const homeBannerStyles = css.global`
   line-height: 1em;
   margin-bottom: 5px;
 }
+.site-header {
+  border-bottom: none !important;
+}
+footer {
+  display: none !important;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
