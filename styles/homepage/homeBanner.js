@@ -14,19 +14,20 @@ export const homeBannerStyles = css.global`
   opacity: 1;
 }
 .carousel-item img {
-  height: calc(91vh - 80px);
-  margin-top: 79px;
+  height: calc(100vh - 160px);
+  margin-top: 80px;
   width: 100%;
   object-fit: contain;
 }
 .carousel-caption {
-  flex-grow: 2;
-  display: flex;
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   justify-content: center;
-  background: #fff;
+  height: 80px;
 }
 .carousel-caption h3 {
   font-size: 18px;
@@ -65,6 +66,7 @@ footer {
   .carousel-caption {
     position: absolute;
     padding: 20px;
+    display: inline-block;
     bottom: 0;
     color: #fff;
     text-align: left;
