@@ -152,6 +152,14 @@ figure[data-fullscreen=true] .controls li {
 figure[data-fullscreen=true] .controls .progress {
 	width:68%;
 }
+@media (max-width: 768px) {
+  video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: #000;
+  }
+}
 @media (min-width: 768px) {
   .controls {
       border-top: none;

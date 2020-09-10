@@ -21,18 +21,23 @@ body {
 }
 a {
   color: #000;
-  line-height: 28px;
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-size: 40px;
+}
+h2, h3, h4, h5, h6 {
   font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
   margin-top: 0;
   line-height: 1.4em;
   font-weight: 600;
+  margin-bottom: 15px;
 }
-p, h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 20px;
+p {
+  margin-bottom: 15px;
 }
 pre, ul {
   margin-bottom: 20px;
@@ -67,18 +72,31 @@ main {
   opacity: 0;
 }
 
-.still-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .gal-links:nth-child(odd) {
   width: 33.33%;
 }
 
+.gal-image {
+  position: relative;
+}
+
+.gal-image:hover .gal-title {
+  opacity: 1;
+}
+
+.gal-title {
+  position: absolute;
+  bottom: 30px;
+  opacity: 0;
+  font-size: 12px;
+  left: 30px;
+  padding: 10px 15px;
+  background: #fff;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .gal-links {
+  position: relative;
   margin: 0 0 20px;
   width: 66.66%;
   display: flex;
@@ -88,6 +106,10 @@ main {
 .gal-link {
   width: 500px;
   height: auto;
+}
+
+footer {
+  font-size: 12px;
 }
 
 /* specific style classes */
@@ -120,7 +142,23 @@ main {
   text-decoration: underline;
 }
 
+.still-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .still-page {
+    flex-direction: row;
+  }
 
 .container {
     padding: 110px 30px;

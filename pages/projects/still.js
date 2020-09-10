@@ -14,13 +14,13 @@ const ShortFormPage = ({ doc, menu }) => {
         <div className="container still-page">
           {doc.results.map((result, index) => (
             <div className="gal-links" key={index}>
-              <DocLink link={ `/projects/still/${result.uid}` }>
+              <DocLink linkClass="gal-image" link={ `/projects/still/${result.uid}` }>
               <img
                 className="gal-link"
                 src={result.data.images[0].image.url}
                 alt={result.data.title}
               />
-              <h1>{result.data.title}</h1>
+              <div className="gal-title">{result.data.title}</div>
             </DocLink>
             </div>
           ))}

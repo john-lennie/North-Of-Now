@@ -23,6 +23,7 @@ export const projectListStyles = css.global`
 }
 .project-thumb .meta {
   width: 50%;
+  font-size: 12px;
   padding-right: 20px;
   box-sizing: border-box;
 }
@@ -58,7 +59,6 @@ export const projectListStyles = css.global`
   position: relative;
   color: #fff;
   display: inline-block;
-  width: 33%;
   transition: opacity 0.7s ease-in-out;
 }
 #short-form-project .meta p {

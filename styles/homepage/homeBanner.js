@@ -14,10 +14,10 @@ export const homeBannerStyles = css.global`
   opacity: 1;
 }
 .carousel-item img {
-  height: calc(91vh - 55px);
-  margin-top: 55px;
+  height: calc(91vh - 80px);
+  margin-top: 79px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .carousel-caption {
   flex-grow: 2;
@@ -43,6 +43,11 @@ export const homeBannerStyles = css.global`
 }
 footer {
   display: none !important;
+}
+@media (min-width: 415px) {
+  .carousel-item img {
+    object-fit: cover;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
 

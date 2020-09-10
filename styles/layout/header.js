@@ -4,7 +4,7 @@ export const headerStyles = css.global`
 .site-header {
   position: relative;
   z-index: 1;
-  height: 55px;
+  height: 79px;
   background: #fff;
   border-bottom: 1px solid #8989893d;
 }
