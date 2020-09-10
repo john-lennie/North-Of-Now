@@ -30,7 +30,7 @@ export const headerStyles = css.global`
   background: none;
 }
 .site-header .logo {
-  height: 55px;
+  height: 79px;
 }
 .site-header .logo img {
   height: 19px;

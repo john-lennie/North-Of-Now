@@ -155,7 +155,7 @@ figure[data-fullscreen=true] .controls .progress {
 @media (max-width: 768px) {
   video {
     width: 100vw;
-    height: 100vh;
+    height: -webkit-fill-available;
     object-fit: contain;
     background: #000;
   }
