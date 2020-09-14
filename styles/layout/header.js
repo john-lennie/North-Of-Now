@@ -71,7 +71,8 @@ export const headerStyles = css.global`
     z-index: 2;
     width: 100%;
     height: 79px;
-    background: #fff;
+    background: none;
+    border: none;
   }
   .homepage .logo-w {
     display: block;

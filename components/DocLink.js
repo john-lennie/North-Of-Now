@@ -5,10 +5,9 @@ import { Link } from 'prismic-reactjs'
 import { linkResolver, hrefResolver } from 'prismic-configuration'
 
 // Main DocLink component function for generating links to other pages on this site
-const DocLink = ({ children, link, color, linkClass }) => {
+const DocLink = ({ children, link, linkClass, inlineStyles }) => {
   if (link) {
     const linkUrl = Link.url(link, linkResolver)
-
     // If the link is an internal link, then return a NextLink
     if (link.link_type && link.link_type === 'Document') {
       return (
@@ -18,9 +17,7 @@ const DocLink = ({ children, link, color, linkClass }) => {
         >
           <a
             className={linkClass}
-            style={{
-              color: `${color}`
-            }}
+            style={inlineStyles}
           >
             {children}
           </a>
@@ -31,13 +28,13 @@ const DocLink = ({ children, link, color, linkClass }) => {
     // If the link is hardcoded within site, return a normal anchor element with hardcoded link
     if (typeof link === "string") {
       return (
-        <a className={linkClass} href={link}>{children}</a>
+        <a style={inlineStyles} className={linkClass} href={link}>{children}</a>
       )
     }
 
     // Otherwise return a normal anchor element
     return (
-      <a className={linkClass} href={linkUrl}>{children}</a>
+      <a style={inlineStyles} className={linkClass} href={linkUrl}>{children}</a>
     )
   }
   return null

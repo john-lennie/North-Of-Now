@@ -6,23 +6,32 @@ import { Header, DocLink, ProjectList, SliceZone } from 'components'
 import { Client } from 'utils/prismicHelpers'
 
 const ShortFormPage = ({ doc, menu }) => {
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  let height = "25vh";
+
   if (doc && doc.results) {
-    console.log(doc.results);
+
     return (
       <DefaultLayout>
         <Header menu={menu} logoColor={"dark"} />
-        <div className="container still-page">
+        <div className="container stills-container">
           {doc.results.map((result, index) => (
-            <div className="gal-links" key={index}>
-              <DocLink linkClass="gal-image" link={ `/projects/still/${result.uid}` }>
+            <DocLink
+              key={index}
+              link={`/projects/still/${result.uid}`}
+              linkClass="stills-link"
+              inlineStyles={{ height: height, top: `calc(80px + ${getRandomInt(75)}vh)`, left: `${getRandomInt(84)}vw`}}
+              >
               <img
-                className="gal-link"
                 src={result.data.images[0].image.url}
                 alt={result.data.title}
               />
               <div className="gal-title">{result.data.title}</div>
             </DocLink>
-            </div>
           ))}
         </div>
       </DefaultLayout>
