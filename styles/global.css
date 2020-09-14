@@ -14,7 +14,6 @@
 body {
   color: #000;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.03em;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.4em;
@@ -76,29 +75,31 @@ main {
   position: relative;
 }
 
-.gal-image:hover .gal-title {
-  opacity: 1;
+.gal-title {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 1em;
+  text-align: right;
+  font-weight: 400;
+  color: #fff;
 }
 
-.gal-title {
-  position: absolute;
-  bottom: 30px;
-  opacity: 0;
-  font-size: 12px;
-  left: 30px;
-  padding: 10px 15px;
-  background: #fff;
-  transition: opacity 0.3s ease-in-out;
+.stills-link:hover .gal-title {
+  opacity: 1;
 }
 
 .stills-link {
   position: absolute;
-  transition: transform 1s ease;
 }
 
 .stills-link:hover {
   z-index: 2;
-  transform: scale(1.1);
 }
 
 .stills-link img {

@@ -39,8 +39,9 @@ export const headerStyles = css.global`
 
 .site-header a {
   color: #000;
-  font-weight: 600;
-  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
   line-height: 79px;
 }
 .site-header a {
@@ -61,7 +62,7 @@ export const headerStyles = css.global`
 }
 .site-header nav li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 @media (min-width: 768px) {
   .site-header {

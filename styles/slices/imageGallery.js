@@ -3,45 +3,61 @@ import css from 'styled-jsx/css'
 export const imageGalleryStyles = css.global`
 .carousel {
   position: relative;
-  margin-bottom: 40px;
+  background: #fff;
 }
 .carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: -25px;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    list-style: none;
+  position: fixed;
+  bottom: 15px;
+  left: 25px;
+  mix-blend-mode: difference;
+  color: #fff;
+  background: #6b666600;
+  font-size: 13px;
+  font-weight: 300;
+  z-index: 15;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  counter-reset: item;
+  list-style-type: none;
 }
 .carousel-indicators li {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    flex-grow: 1;
-    height: 1px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #000;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: .1;
+  padding: 15px 5px;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+.carousel-indicators li:hover {
+  text-decoration: underline;
+}
+.carousel-indicators li:before {
+  content: counter(item) "  ";
+  counter-increment: item
 }
 .carousel-indicators .active {
-    opacity: 1;
+    text-decoration: underline;
 }
 .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .carousel-item {
   position: relative;
   float: left;
+  height: 100%;
   width: 100%;
   margin-right: -100%;
   opacity: 0;
@@ -51,6 +67,8 @@ export const imageGalleryStyles = css.global`
 }
 .carousel-item img {
   object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 .carousel-caption {
   flex-grow: 2;
@@ -89,12 +107,21 @@ export const imageGalleryStyles = css.global`
   align-items: center;
   justify-content: flex-end;
 }
+.close {
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  top: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #000;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
 @media (min-width: 1024px) {
   .carousel {
-    height: calc(100vh - 115px);
+    height: 100vh;
   }
   .carousel-inner {
     height: 100%;
@@ -102,7 +129,7 @@ export const imageGalleryStyles = css.global`
   .carousel-item {
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 100%;
   }
   .carousel-item img {
     height: 100%;

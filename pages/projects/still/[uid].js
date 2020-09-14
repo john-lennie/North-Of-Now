@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DefaultLayout from 'layouts'
-import { Header, ClickToReveal } from 'components'
+import { Header, DocLink, ClickToReveal } from 'components'
 
 import { queryRepeatableDocuments } from 'utils/queries'
 
@@ -13,10 +13,10 @@ import { imageGalleryStyles } from 'styles'
 const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
-      <DefaultLayout>
+        <div>
           <Header menu={menu} />
-          <div className="container">
-            <Carousel fade={true} pause={false} interval={5000} nextLabel={''} prevLabel={''}>
+            <DocLink link="/projects/still" linkClass="close">Close X</DocLink>
+            <Carousel fade={true} pause={false} interval={60000} nextLabel={''} prevLabel={''}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>
                   <img
@@ -30,13 +30,12 @@ const Page = ({ doc, menu }) => {
                 </Carousel.Item>
               ))}
             </Carousel>
-            <h1>{doc.data.title}</h1>
+            {/* <h1>{doc.data.title}</h1>
             <p><span className="fw500">Creative Direction:</span> Creative Director</p>
             <p><span className="fw500">Photography:</span> Photographer</p>
-            <p><span className="fw500">Stylist:</span> Stylist</p>
-          </div>
+            <p><span className="fw500">Stylist:</span> Stylist</p> */}
           <style jsx global>{imageGalleryStyles}</style>
-      </DefaultLayout>
+        </div>
     )
   }
 
