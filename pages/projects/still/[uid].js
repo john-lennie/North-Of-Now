@@ -16,6 +16,7 @@ const Page = ({ doc, menu }) => {
         <div>
           <Header menu={menu} />
             <DocLink link="/projects/still" linkClass="close">Close X</DocLink>
+            <h1 className="title">{doc.data.title}</h1>
             <Carousel fade={true} pause={false} interval={60000} nextLabel={''} prevLabel={''}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>

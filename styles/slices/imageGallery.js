@@ -116,11 +116,26 @@ export const imageGalleryStyles = css.global`
   font-size: 13px;
   color: #000;
 }
+.title {
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  bottom: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 0;
+  font-weight: 300;
+  mix-blend-mode: difference;
+  color: #fff;
+  background: #6b666600;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
 @media (min-width: 1024px) {
   .carousel {
+    position: fixed;
+    top: 0;
     height: 100vh;
   }
   .carousel-inner {

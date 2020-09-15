@@ -3,6 +3,7 @@ import css from 'styled-jsx/css'
 export const projectListStyles = css.global`
 .filterBy {
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 .filterBy .grey {
   margin-right: 10px;
@@ -19,32 +20,42 @@ export const projectListStyles = css.global`
   grid-gap: 20px;
 }
 .project-thumb {
-  display: flex;
 }
 .project-thumb .meta {
-  width: 50%;
-  font-size: 12px;
-  padding-right: 20px;
+  font-size: 11px;
   box-sizing: border-box;
 }
 .meta h2.title {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+  font-size: 13px;
+  font-weight: 300;
 }
 .meta p {
   margin-bottom: 0px;
+  line-height: 1.3em;
 }
 .meta .grey {
   margin-right: 5px;
 }
 .project-img {
-  width: 50%;
+  margin-bottom: 10px;
+}
+.project-img a {
+  display: inline-block;
 }
 .project-img a img {
   object-fit: cover;
   width: 100%;
-  height: 120px;
+  height: 250px;
   border-radius: 2px;
   float: right;
+}
+.long-form-project-thumbs .project-thumb {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.long-form-project-thumbs .project-img, .long-form-project-thumbs .meta {
+  width: 50%;
 }
 .long-form-project-thumbs .project-img a img {
   height: auto;
@@ -94,7 +105,7 @@ export const projectListStyles = css.global`
 }
 @media (min-width: 1024px) {
   .short-form-project-thumbs {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
   .long-form-project-thumbs {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));

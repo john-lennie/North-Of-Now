@@ -19,7 +19,7 @@ const Page = ({ doc, menu }) => {
             />
           </div>
           <div className="infoLeft">
-            <div className="pad-30">
+            <div className="section-1">
               <h1>{doc.data.title}</h1>
               <p className="grey">{doc.data.type}</p>
               <p>{doc.data.description}</p>
@@ -88,7 +88,7 @@ const Page = ({ doc, menu }) => {
             />
           </div>
           <div className="infoLeft">
-            <div className="pad-30">
+            <div className="section-1">
               <h1>{doc.data.title}</h1>
               <p className="grey">{doc.data.type}</p>
               <p>{doc.data.description}</p>

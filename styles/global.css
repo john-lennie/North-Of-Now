@@ -14,9 +14,9 @@
 body {
   color: #000;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 a {
   color: #000;
@@ -145,10 +145,6 @@ footer {
 
 @media (min-width: 768px) {
 
-  body {
-    font-size: 16px;
-  }
-
   h1 {
     font-size: 40px;
   }
@@ -159,7 +155,7 @@ footer {
   }
 
   .container {
-      padding: 80px 30px;
+      padding: 0 30px;
   }
 
 }

@@ -56,6 +56,9 @@ export const longFormSingleStyles = css.global`
   width: 100%;
   height: 100%;
 }
+.section-1 {
+  padding: 0 30px 30px;
+}
 @media (min-width: 415px) {
   .youtube-vids {
     display: grid;
@@ -69,17 +72,16 @@ export const longFormSingleStyles = css.global`
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
   }
   .infoLeft {
-    margin-top: 80px;
     width: 60%;
     min-height: calc(100vh - 160px);
   }
   .poster {
     position: fixed;
-    top: 79px;;
+    top: 0;
     right: 0;
     z-index: 1;
     width: 40%;
-    height: calc(100vh - 79px);
+    height: 100vh;
     border-left: 1px solid #8989893d;
     display: flex;
     align-items: center;
@@ -96,7 +98,7 @@ export const longFormSingleStyles = css.global`
     margin-left: 30px;
   }
   footer {
-    width: calc(60% - 41px);
+    width: 60%;
   }
 }
 `

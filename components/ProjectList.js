@@ -76,6 +76,7 @@ const ProjectList = ({ category, projects }) => {
               <option value="2020">2020</option>
               <option value="2019">2019</option>
               <option value="2018">2018</option>
+              <option value="2017">2017</option>
             </select>
           </span>
           <span className="filterByType">
@@ -99,11 +100,6 @@ const ProjectList = ({ category, projects }) => {
       <div className={form === "long-form" ? "long-form-project-thumbs" : "short-form-project-thumbs"}>
         {projectList.map((project, index) => (
           <div className="project-thumb" key={index}>
-            <div className="meta">
-              <h2 className="title">{project.data.title}</h2>
-              <p><span className="grey">Date:</span> {project.data.date}</p>
-              <p><span className="grey">Type:</span> {project.data.type}</p>
-            </div>
             <div className="project-img">
               <DocLink link={ `/projects/${form}/${project.uid}` }>
                 <img
@@ -111,6 +107,11 @@ const ProjectList = ({ category, projects }) => {
                   alt={project.data.thumbnail.alt}
                 />
               </DocLink>
+            </div>
+            <div className="meta">
+              <h2 className="title">{project.data.title}</h2>
+              <p className="grey">{project.data.type}</p>
+              <p className="grey">{project.data.date}</p>
             </div>
           </div>
         ))}

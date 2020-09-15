@@ -5,8 +5,6 @@ export const headerStyles = css.global`
   position: relative;
   z-index: 1;
   height: 79px;
-  background: #fff;
-  border-bottom: 1px solid #8989893d;
 }
 .homepage .site-header {
   background: none;
@@ -65,16 +63,6 @@ export const headerStyles = css.global`
   margin-right: 15px;
 }
 @media (min-width: 768px) {
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 79px;
-    background: none;
-    border: none;
-  }
   .homepage .logo-w {
     display: block;
   }
