@@ -6,6 +6,7 @@ import { Header, ProjectList, SliceZone } from 'components'
 import { Client } from 'utils/prismicHelpers'
 
 const ShortFormPage = ({ doc, menu }) => {
+  console.log(doc.results.length);
   if (doc && doc.results) {
     return (
       <DefaultLayout>
@@ -26,7 +27,7 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
   const client = Client()
 
   const doc = await client.query(
-    Prismic.Predicates.at('document.type', 'short_form_project_page')
+    Prismic.Predicates.at('document.type', 'short_form_project_page'), { pageSize : 100, orderings : '[document.first_publication_date desc]' }
   ).then(res => {
       // res is the response object, res.results holds the documents
       return res
@@ -38,7 +39,11 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
       doc,
       menu,
       preview
-    }
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    revalidate: 1, // In seconds
   }
 }
 
