@@ -56,9 +56,12 @@ video {
   background: none;
   border: none;
   padding: 0;
-  font-size: 12px;
+  font-size: 13px;
   font-family: inherit;
   margin-bottom: 10px;
+}
+.controls .button#fs {
+  display: none;
 }
 .controls .floatR .button {
   margin-left: 10px;
@@ -151,6 +154,18 @@ figure[data-fullscreen=true] .controls li {
 }
 figure[data-fullscreen=true] .controls .progress {
 	width:68%;
+}
+.controls .button[data-state="pause"]:after {
+  content: "Pause";
+}
+.controls .button[data-state="play"]:after {
+  content: "Play";
+}
+.controls .button[data-state="unmute"]:after {
+  content: "Unmute";
+}
+.controls .button[data-state="mute"]:after {
+  content: "Mute";
 }
 @media (max-width: 768px) {
   video {

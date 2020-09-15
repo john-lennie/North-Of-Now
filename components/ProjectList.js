@@ -68,7 +68,6 @@ const ProjectList = ({ category, projects }) => {
     <div className="container">
       <div className="filterBy">
         Filter By:
-        <span className="floatR">
           <span className="filterByDate">
             <span className="grey">Year</span>
             <select onChange={handleDateChange}>
@@ -95,7 +94,7 @@ const ProjectList = ({ category, projects }) => {
                 </select>
               )
             }
-          </span></span>
+          </span>
       </div>
       <div className={form === "long-form" ? "long-form-project-thumbs" : "short-form-project-thumbs"}>
         {projectList.map((project, index) => (

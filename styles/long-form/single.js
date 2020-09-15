@@ -4,7 +4,6 @@ export const longFormSingleStyles = css.global`
 .poster img {
   max-width: 100%;
   max-height: 100vh;
-  box-shadow: 0px 4px 10px #00000091;
 }
 .infoLeft p:last-child {
   margin-bottom: 0;
@@ -82,14 +81,16 @@ export const longFormSingleStyles = css.global`
     z-index: 1;
     width: 40%;
     height: 100vh;
-    border-left: 1px solid #8989893d;
+    background: #000;
+    border-left: 1px solid #2d2d2d;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .poster img {
-    max-width: calc(40vw - 40px);
-    max-height: calc(100vh - 200px);
+    max-width: calc(100% - 80px);
+    max-height: calc(100% - 80px);
+    border: 1px solid #2d2d2d;
   }
   .watch-now-section {
     display: flex;

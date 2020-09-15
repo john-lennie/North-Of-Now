@@ -36,22 +36,28 @@ const Page = ({ doc, menu }) => {
             <div id="short-form-project" className="container">
               <div className="meta">
                 <h1>{doc.data.title}</h1>
-                <p><span className="fw500">Date:</span> {doc.data.date}</p>
-                <p><span className="fw500">Type:</span> {doc.data.type}</p>
-                <p className="fw500">Credits:</p>
-                <p>Directed By: <span className="fw500">{doc.data.credits[0].directed_by}</span><br/>
-                   Produced By: <span className="fw500">{doc.data.credits[0].produced_by}</span>
-                </p>
+                <p> {doc.data.type}</p>
+                <p><span className="fw500">Release Date:</span> {doc.data.date}</p>
+                {doc.data.credits.length > 1 ?
+                  <div>
+                    <p className="fw500">Credits:</p>
+                    <p>Directed By: <span className="fw500">{doc.data.credits[0].directed_by}</span><br/>
+                       Produced By: <span className="fw500">{doc.data.credits[0].produced_by}</span>
+                    </p>
+                  </div>
+                : ""}
               </div>
-              <div className="description">
-                <ClickToReveal title="Info" content={doc.data.description} />
-              </div>
+              {doc.data.description[0].paragraph ?
+                <div className="description">
+                  <ClickToReveal title="Info" content={doc.data.description} />
+                </div>
+              : ""}
             </div>
             <div id="video-controls" className="controls" data-state="hidden">
-               <span className="button" id="playpause" data-state="play">Play/Pause</span>
+               <span className="button" id="playpause" data-state="play"></span>
                <div className="floatR">
-                 <span className="button" id="mute" data-state="mute">Mute/Unmute</span>
-                 <span className="button" id="fs" data-state="go-fullscreen">Fullscreen</span>
+                 <span className="button" id="mute" data-state="unmute"></span>
+                 <span className="button" id="fs" data-state="go-fullscreen"></span>
                </div>
                <div className="progress">
                   <progress id="progress" value="0" min="0">

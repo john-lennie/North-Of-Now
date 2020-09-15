@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'
 
 export const projectListStyles = css.global`
 .filterBy {
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   text-transform: uppercase;
 }
 .filterBy .grey {
@@ -81,6 +81,9 @@ export const projectListStyles = css.global`
 }
 
 @media (min-width: 768px) {
+  #short-form-project .description {
+    width: 33%
+  }
   #short-form-project .meta, #short-form-project .video {
     margin-bottom: 0px;
   }
@@ -93,11 +96,11 @@ export const projectListStyles = css.global`
     padding: 20px;
   }
   .filterBy {
-    position: fixed;
-    right: 30px;
-    top: 30px;
-    z-index: 2;
-    text-align: right;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0px;
+    margin-top: -51px;
+    float: right;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
