@@ -56,7 +56,7 @@ export const longFormSingleStyles = css.global`
   height: 100%;
 }
 .section-1 {
-  padding: 0 30px 30px;
+  padding: 30px;
 }
 @media (min-width: 415px) {
   .youtube-vids {
@@ -67,6 +67,9 @@ export const longFormSingleStyles = css.global`
   }
 }
 @media (min-width: 768px) {
+  .section-1 {
+    padding: 0 30px 30px;
+  }
   .youtube-vids {
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
   }

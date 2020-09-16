@@ -60,7 +60,7 @@ img {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 .container {
-  padding: 20px;
+    padding: 5px 20px;
 }
 
 main {
@@ -141,6 +141,26 @@ footer {
 }
 
 .stills-container {
+}
+
+@media (max-width: 767px) {
+
+  .stills-link {
+    position: relative;
+    height: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .stills-link img {
+    height: auto;
+  }
+
+  .gal-title {
+    opacity: 1;
+    bottom: 5px;
+  }
+
 }
 
 @media (min-width: 768px) {

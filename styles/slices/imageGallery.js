@@ -129,15 +129,29 @@ export const imageGalleryStyles = css.global`
   color: #fff;
   background: #6b666600;
 }
+.carousel {
+  position: fixed;
+  top: 0;
+  height: -webkit-fill-available;
+}
+
+@media (max-width: 767px) {
+
+  .carousel-indicators {
+    left: 0;
+    width: 100%;
+  }
+  .title, .close {
+    display: none;
+  }
+
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
 @media (min-width: 1024px) {
-  .carousel {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-  }
+
   .carousel-inner {
     height: 100%;
 }
