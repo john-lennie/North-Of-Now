@@ -48,12 +48,6 @@ export const imageGalleryStyles = css.global`
 .carousel-indicators .active {
     text-decoration: underline;
 }
-.carousel-inner {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 .carousel-item {
   position: relative;
   float: left;
@@ -135,6 +129,14 @@ export const imageGalleryStyles = css.global`
   height: -webkit-fill-available;
 }
 
+.carousel-inner {
+    position: relative;
+    width: 100vw;
+    height: -webkit-fill-available;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
 @media (max-width: 767px) {
 
   .carousel-indicators {
@@ -147,7 +149,12 @@ export const imageGalleryStyles = css.global`
 
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
+
+  .carousel-inner {
+    padding: 0;
+    height: 100vh;
+  }
 
 }
 @media (min-width: 1024px) {
