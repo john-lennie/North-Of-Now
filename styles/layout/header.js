@@ -4,7 +4,8 @@ export const headerStyles = css.global`
 .site-header {
   position: relative;
   z-index: 1;
-  height: 79px;
+  display: flex;
+  align-items: center;
 }
 .homepage .site-header {
   background: none;
@@ -28,11 +29,11 @@ export const headerStyles = css.global`
   background: none;
 }
 .site-header .logo {
-  height: 79px;
+  height: 59px;
 }
 .site-header .logo img {
   height: 19px;
-  margin: 30px;
+  padding: 20px;
 }
 
 .site-header a {
@@ -40,7 +41,6 @@ export const headerStyles = css.global`
   text-transform: uppercase;
   font-weight: 300;
   font-size: 13px;
-  line-height: 79px;
 }
 .site-header a {
   display: inline-block;
@@ -63,6 +63,13 @@ export const headerStyles = css.global`
   margin-right: 15px;
 }
 @media (min-width: 768px) {
+  .site-header .logo {
+    height: 79px;
+  }
+  .site-header .logo img {
+    margin: 30px;
+    padding: 0;
+  }
   .homepage .logo-w {
     display: block;
   }
