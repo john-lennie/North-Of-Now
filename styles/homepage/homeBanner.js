@@ -52,15 +52,13 @@ footer {
     object-fit: cover;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-
-}
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .carousel-item {
-    position: absolute;
-    top: 0;
+    padding: 0;
     height: 100vh;
   }
+}
+@media (min-width: 1024px) {
   .carousel-item img {
     height: 100%;
     margin-top: 0px;
