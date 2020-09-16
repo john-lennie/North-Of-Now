@@ -5,7 +5,10 @@ export const homeBannerStyles = css.global`
   position: fixed;
   top: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  padding: 80px 0;
   height: -webkit-fill-available;
   opacity: 0;
   transition: all 1s ease-in-out;
@@ -14,8 +17,7 @@ export const homeBannerStyles = css.global`
   opacity: 1;
 }
 .carousel-item img {
-  height: calc(100vh - 160px);
-  margin-top: 80px;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
