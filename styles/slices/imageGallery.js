@@ -147,7 +147,7 @@ export const imageGalleryStyles = css.global`
     display: none;
   }
 
-  .carousel-item {
+  .carousel-item, .carousel-item img {
     height: -webkit-fill-available;
   }
 
