@@ -147,6 +147,10 @@ export const imageGalleryStyles = css.global`
     display: none;
   }
 
+  .carousel-item {
+    height: -webkit-fill-available;
+  }
+
 }
 
 @media (min-width: 768px) {
