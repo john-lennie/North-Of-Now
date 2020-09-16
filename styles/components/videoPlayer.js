@@ -171,6 +171,7 @@ figure[data-fullscreen=true] .controls .progress {
   video {
     width: 100vw;
     height: -webkit-fill-available;
+    padding-bottom: 76px;
     object-fit: contain;
     background: #000;
   }
