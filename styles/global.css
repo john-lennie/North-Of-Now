@@ -173,7 +173,8 @@ footer {
 
   .stills-container {
     position: relative;
-    height: 100vh;
+    margin: 12.5vh 0;
+    height: calc(68vh);
   }
 
   .container {
