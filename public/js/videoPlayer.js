@@ -2,24 +2,52 @@ document.addEventListener("DOMContentLoaded", () => {
   (function () {
     'use strict';
 
-    var infoText = document.getElementById('short-form-project');
-    var timeout;
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-    setTimeout(function(){
-      infoText.classList.toggle("hidden");
-    }, 5000);
+    if (viewportWidth > 768) {
+      var infoText = document.getElementById('short-form-project');
+      var timeout;
 
-    document.addEventListener('mousemove', e => {
-      clearTimeout(timeout);
-      // if hidden show right away, when visible hide after x seconds
-      if (infoText.classList.contains('hidden')) {
+      setTimeout(function(){
         infoText.classList.toggle("hidden");
-      } else {
-        timeout = setTimeout(function(){
+      }, 5000);
+
+      document.addEventListener('mousemove', e => {
+        clearTimeout(timeout);
+        // if hidden show right away, when visible hide after x seconds
+        if (infoText.classList.contains('hidden')) {
           infoText.classList.toggle("hidden");
-        }, 10000);
+        } else {
+          timeout = setTimeout(function(){
+            infoText.classList.toggle("hidden");
+          }, 10000);
+        }
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (viewportWidth > 768) {
+        var infoText = document.getElementById('short-form-project');
+        var timeout;
+
+        setTimeout(function(){
+          infoText.classList.toggle("hidden");
+        }, 5000);
+
+        document.addEventListener('mousemove', e => {
+          clearTimeout(timeout);
+          // if hidden show right away, when visible hide after x seconds
+          if (infoText.classList.contains('hidden')) {
+            infoText.classList.toggle("hidden");
+          } else {
+            timeout = setTimeout(function(){
+              infoText.classList.toggle("hidden");
+            }, 10000);
+          }
+        });
       }
-    });
+    }, false);
 
     // Does the browser actually support the video element?
     var supportsVideo = !!document.createElement('video').canPlayType;
