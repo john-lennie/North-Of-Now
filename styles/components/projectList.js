@@ -35,7 +35,6 @@ export const projectListStyles = css.global`
 }
 .meta p {
   margin-bottom: 0px;
-  line-height: 1.3em;
 }
 .meta .grey {
   margin-right: 5px;
