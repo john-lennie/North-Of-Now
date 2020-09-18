@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'
 
 export const projectListStyles = css.global`
 .filterBy {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 35px;
@@ -100,6 +100,7 @@ export const projectListStyles = css.global`
   .filterBy {
     position: relative;
     z-index: 1;
+    display: flex;
     justify-content: flex-end;
     padding-bottom: 0px;
     margin-top: -49px;
