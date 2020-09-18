@@ -2,13 +2,13 @@ import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
 .carousel-item {
-  position: fixed;
+  position: absolute;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 0;
+  padding: 59px 0 80px;
   height: -webkit-fill-available;
   opacity: 0;
   transition: all 1s ease-in-out;
@@ -47,28 +47,25 @@ export const homeBannerStyles = css.global`
 footer {
   display: none !important;
 }
-@media (min-width: 415px) {
-  .carousel-item img {
-    object-fit: cover;
-  }
-}
 @media (min-width: 768px) {
+  .carousel-inner {
+
+  }
   .carousel-item {
     padding: 0;
     height: 100vh;
   }
-}
-@media (min-width: 1024px) {
   .carousel-item img {
-    height: 100%;
-    margin-top: 0px;
+    object-fit: cover;
   }
   .carousel-caption {
     position: absolute;
     padding: 20px;
+    box-sizing: border-box;
     display: inline-block;
     bottom: 0;
     color: #fff;
+    height: auto;
     text-align: left;
     background: none;
   }
@@ -79,5 +76,12 @@ footer {
   .carousel-caption p {
     font-size: 20px;]
   }
+}
+@media (min-width: 1024px) {
+  .carousel-item img {
+    height: 100%;
+    margin-top: 0px;
+  }
+
 }
 `

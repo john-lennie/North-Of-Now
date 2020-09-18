@@ -2,6 +2,9 @@ import css from 'styled-jsx/css'
 
 export const projectListStyles = css.global`
 .filterBy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 35px;
   text-transform: uppercase;
 }
@@ -98,8 +101,9 @@ export const projectListStyles = css.global`
   .filterBy {
     position: relative;
     z-index: 1;
+    justify-content: flex-end;
     padding-bottom: 0px;
-    margin-top: -51px;
+    margin-top: -49px;
     float: right;
   }
 }

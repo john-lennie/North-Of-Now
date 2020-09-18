@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         timeout = setTimeout(function(){
           infoText.classList.toggle("hidden");
-        }, 5000);
+        }, 10000);
       }
     });
 

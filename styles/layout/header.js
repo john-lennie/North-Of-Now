@@ -6,6 +6,7 @@ export const headerStyles = css.global`
   z-index: 1;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .homepage .site-header {
   background: none;
@@ -60,9 +61,12 @@ export const headerStyles = css.global`
 }
 .site-header nav li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 @media (min-width: 768px) {
+  .site-header {
+    justify-content: flex-start;
+  }
   .site-header .logo {
     height: 79px;
   }
