@@ -167,6 +167,9 @@ figure[data-fullscreen=true] .controls .progress {
 .controls .button[data-state="mute"]:after {
   content: "Mute";
 }
+.description {
+  margin-bottom: 100px;
+}
 @media (max-width: 768px) {
   video {
     width: 100vw;

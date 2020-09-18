@@ -41,16 +41,12 @@ export const headerStyles = css.global`
   color: #000;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 13px;
 }
 .site-header a {
   display: inline-block;
 }
 .site-header nav a:hover {
-  color: #72767B;
-}
-.homepage .site-header nav a:hover {
-  color: #c8c9cb;
+  text-decoration: underline;
 }
 .site-header nav {
   display: inline-block;
