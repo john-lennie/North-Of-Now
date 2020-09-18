@@ -13,6 +13,7 @@ const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
         <div>
+          <style jsx global>{videoPlayerStyles}</style>
           <Head>
             <script type="text/javascript" src="/js/videoPlayer.js"></script>
           </Head>
@@ -53,7 +54,7 @@ const Page = ({ doc, menu }) => {
                 </div>
               : ""}
             </div>
-            <div id="video-controls" className="controls" data-state="hidden">
+            <div id="video-controls" className="controls">
                <span className="button" id="playpause" data-state="play"></span>
                <div className="floatR">
                  <span className="button" id="mute" data-state="unmute"></span>
@@ -66,8 +67,6 @@ const Page = ({ doc, menu }) => {
                </div>
             </div>
           </div>
-          <style jsx global>{videoPlayerStyles}</style>
-          <style jsx global>{projectListStyles}</style>
         </div>
     )
   }

@@ -29,7 +29,6 @@ video {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    display: none;
     list-style-type: none;
     overflow: hidden;
     background: transparent;
@@ -170,6 +169,19 @@ figure[data-fullscreen=true] .controls .progress {
 .description {
   margin-bottom: 100px;
   line-height: 1.6em;
+}
+#short-form-project {
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  transition: opacity 0.7s ease-in-out;
+}
+#short-form-project .meta p {
+  margin-bottom: 20px;
+}
+#short-form-project .meta p.title {
+    font-size: 24px;
+    line-height: 1.4em;
 }
 @media (max-width: 768px) {
   video {
