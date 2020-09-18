@@ -169,6 +169,7 @@ figure[data-fullscreen=true] .controls .progress {
 }
 .description {
   margin-bottom: 100px;
+  line-height: 1.6em;
 }
 @media (max-width: 768px) {
   video {
@@ -177,6 +178,10 @@ figure[data-fullscreen=true] .controls .progress {
     padding-bottom: 76px;
     object-fit: contain;
     background: #000;
+  }
+  h1 {
+    width: 50%;
+    line-height: 1.6em;
   }
 }
 @media (min-width: 768px) {
