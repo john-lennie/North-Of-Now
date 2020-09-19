@@ -15,6 +15,7 @@ export const homeBannerStyles = css.global`
 }
 .carousel-item.active {
   opacity: 1;
+  z-index: 1;
 }
 .carousel-item img {
   height: 100%;
@@ -24,6 +25,7 @@ export const homeBannerStyles = css.global`
 .carousel-caption {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -55,8 +57,12 @@ footer {
     padding: 0;
     height: 100vh;
   }
+  .carousel-item a {
+    display: contents;
+  }
   .carousel-item img {
     object-fit: cover;
+    height: 100vh;
   }
   .carousel-caption {
     position: absolute;
@@ -79,7 +85,6 @@ footer {
 }
 @media (min-width: 1024px) {
   .carousel-item img {
-    height: 100%;
     margin-top: 0px;
   }
 
