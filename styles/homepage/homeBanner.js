@@ -1,6 +1,10 @@
 import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
+.homepage {
+  position: relative;
+  height: -webkit-fill-available;
+}
 .carousel-item {
   position: absolute;
   top: 0;
@@ -23,7 +27,7 @@ export const homeBannerStyles = css.global`
   object-fit: contain;
 }
 .carousel-caption {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
