@@ -14,7 +14,7 @@ export const homeBannerStyles = css.global`
   flex-direction: column;
   padding: 120px 0;
   box-sizing: border-box;
-  height: webkit-fill-available;
+  height: -webkit-fill-available;
   opacity: 0;
   transition: all 1s ease-in-out;
 }
