@@ -12,11 +12,14 @@ export const homeBannerStyles = css.global`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 120px 0;
+  padding: 80px 20px;
   box-sizing: border-box;
   height: -webkit-fill-available;
   opacity: 0;
   transition: all 1s ease-in-out;
+}
+.carousel-item a {
+  overflow: hidden;
 }
 .carousel-item.active {
   opacity: 1;
