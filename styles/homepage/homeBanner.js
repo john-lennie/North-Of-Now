@@ -5,6 +5,9 @@ export const homeBannerStyles = css.global`
   position: relative;
   height: -webkit-fill-available;
 }
+.carousel {
+
+}
 .carousel-item {
   position: absolute;
   top: 0;
@@ -12,7 +15,7 @@ export const homeBannerStyles = css.global`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 20px;
+  padding: 59px 20px 80px;
   box-sizing: border-box;
   height: -webkit-fill-available;
   opacity: 0;
@@ -31,7 +34,7 @@ export const homeBannerStyles = css.global`
   object-fit: contain;
 }
 .carousel-caption {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
