@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 const HomeBanner = ({ slides }) => (
   <div>
-    <Carousel fade={true} pause={false} controls={false} indicators={false} interval={8000}>
+    <Carousel fade={true} pause={false} controls={false} indicators={false} interval={10000}>
       {slides.map((slide, index) => (
           <Carousel.Item key={index}>
             <DocLink link={slide.slide_link.type === "short_form_project_page" ? `projects/short-form/${slide.slide_link.slug}` : (slide.slide_link.type === "long_form_project_page" ? `projects/long-form/${slide.slide_link.slug}` : `projects/still/${slide.slide_link.slug}`)}>
