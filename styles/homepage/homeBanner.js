@@ -15,8 +15,12 @@ export const homeBannerStyles = css.global`
 }
 .carousel-item {
   position: fixed;
-  top: 0;
-  background: #000;
+  width: 100%;
+  z-index: 1;
+  transform: translateY(100vh);
+  backface-visibility: hidden;
+  background: #0000;
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,15 +28,15 @@ export const homeBannerStyles = css.global`
   padding: 59px 20px 80px;
   box-sizing: border-box;
   height: -webkit-fill-available;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
 }
 .carousel-item a {
   overflow: hidden;
 }
 .carousel-item.active {
   opacity: 1;
-  z-index: 1;
+  transition: .4s ease-in;
+  transform: translateY(0);
+  background: #000;
 }
 .carousel-item img {
   height: 100%;
