@@ -4,6 +4,7 @@ export const homeBannerStyles = css.global`
 .homepage .site-header {
     background: none;
     position: fixed;
+    width: 100%;
 }
 .homepage .site-header a {
   color: #000;
