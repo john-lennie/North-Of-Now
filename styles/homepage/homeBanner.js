@@ -12,7 +12,7 @@ export const homeBannerStyles = css.global`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 59px 0 80px;
+  padding: 80px 0;
   height: -webkit-fill-available;
   opacity: 0;
   transition: all 1s ease-in-out;
