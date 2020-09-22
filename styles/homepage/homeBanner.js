@@ -9,7 +9,7 @@ export const homeBannerStyles = css.global`
 
 }
 .carousel-item {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: center;
