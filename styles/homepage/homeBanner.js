@@ -13,6 +13,7 @@ export const homeBannerStyles = css.global`
   justify-content: center;
   flex-direction: column;
   padding: 80px 0;
+  box-sizing: border-box;
   height: 100vh;
   opacity: 0;
   transition: all 1s ease-in-out;
