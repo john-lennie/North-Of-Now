@@ -8,12 +8,6 @@ export const headerStyles = css.global`
   align-items: center;
   justify-content: space-between;
 }
-.homepage .site-header {
-  background: none;
-}
-.homepage .site-header a {
-  color: #000;
-}
 .short-form-page .site-header a {
   color: #fff;
 }

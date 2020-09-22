@@ -1,12 +1,12 @@
 import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
-.homepage {
-  position: relative;
-  height: -webkit-fill-available;
+.homepage .site-header {
+    background: none;
+    position: fixed;
 }
-.carousel {
-
+.homepage .site-header a {
+  color: #000;
 }
 .carousel-item {
   position: fixed;
