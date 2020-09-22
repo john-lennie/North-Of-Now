@@ -9,11 +9,11 @@ const Header = ({ menu, logoColor }) => (
   <header className="site-header">
     <NextLink href="/">
       <a>
-        <div className="logo logo-w">
-          <img src="/logo-w.png" alt="North of Now"/>
-        </div>
-        <div className="logo logo-b">
-          <img src="/logo-b.png" alt="North of Now"/>
+        <div className="logo">
+          {logoColor === "white" ?
+            <img src="/logo-w.png" alt="North of Now"/>
+          : <img src="/logo-b.png" alt="North of Now"/>
+          }
         </div>
       </a>
     </NextLink>

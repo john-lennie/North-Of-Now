@@ -10,7 +10,7 @@ const HomePage = ({ doc, menu }) => {
     return (
       <DefaultLayout>
         <div className='homepage'>
-          <Header menu={menu} />
+          <Header menu={menu} logoColor="white" />
           <HomeBanner slides={doc.data.slides} />
         </div>
       </DefaultLayout>

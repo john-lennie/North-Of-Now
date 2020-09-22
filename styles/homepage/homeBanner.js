@@ -7,11 +7,12 @@ export const homeBannerStyles = css.global`
     width: 100%;
 }
 .homepage .site-header a {
-  color: #000;
+  color: #fff;
 }
 .carousel-item {
   position: fixed;
   top: 0;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +39,7 @@ export const homeBannerStyles = css.global`
   position: fixed;
   bottom: 0;
   left: 0;
+  color: #fff;
   width: 100%;
   display: flex;
   flex-direction: column;

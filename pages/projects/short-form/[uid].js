@@ -18,7 +18,7 @@ const Page = ({ doc, menu }) => {
             <script type="text/javascript" src="/js/videoPlayer.js"></script>
           </Head>
           <div className="short-form-page">
-            <Header menu={menu} />
+            <Header menu={menu} logoColor="white" />
             <figure id="videoContainer" data-fullscreen="false">
               <video id="video" autoPlay loop muted playsInline>
                 <source src={doc.data.vimeo_mp4_url} type="video/mp4" />
