@@ -5,7 +5,7 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
 }
 .footer-left .logo {
@@ -13,5 +13,10 @@ footer {
 }
 .footer-right {
   text-align: right;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 30px;
+  }
 }
 `
