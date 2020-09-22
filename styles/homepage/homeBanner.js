@@ -50,6 +50,7 @@ export const homeBannerStyles = css.global`
   color: #fff;
   width: 100%;
   display: flex;
+  text-transform: uppercase;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -57,11 +58,11 @@ export const homeBannerStyles = css.global`
 }
 .carousel-caption h3 {
   font-size: 18px;
+  text-transform: uppercase;
   line-height: 1em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .carousel-caption p {
-  font-size: 12px;
   line-height: 1em;
   margin-bottom: 5px;
 }
@@ -97,11 +98,8 @@ footer {
     background: none;
   }
   .carousel-caption h3 {
-    font-size: 34px;
+    font-size: 24px;
     line-height: 1.4em;
-  }
-  .carousel-caption p {
-    font-size: 20px;]
   }
 }
 @media (min-width: 1024px) {
