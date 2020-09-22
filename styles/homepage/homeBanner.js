@@ -9,6 +9,10 @@ export const homeBannerStyles = css.global`
 .homepage .site-header a {
   color: #fff;
 }
+.carousel-inner {
+  height: 100vh;
+  background: #000;
+}
 .carousel-item {
   position: fixed;
   top: 0;
@@ -21,7 +25,7 @@ export const homeBannerStyles = css.global`
   box-sizing: border-box;
   height: -webkit-fill-available;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .carousel-item a {
   overflow: hidden;
@@ -75,7 +79,6 @@ footer {
     display: contents;
   }
   .carousel-item img {
-    object-fit: cover;
     height: 100vh;
   }
   .carousel-caption {

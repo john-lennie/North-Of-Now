@@ -16,7 +16,6 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 300;
-  line-height: 1.4em;
 }
 a {
   color: #000;
@@ -126,6 +125,9 @@ footer {
 }
 .fw500 {
   font-weight: 500;
+}
+.italic {
+  font-style: italic;
 }
 .floatR {
   float: right;

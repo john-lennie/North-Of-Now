@@ -99,7 +99,7 @@ export const projectListStyles = css.global`
   }
   .filterBy {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: flex-end;
     padding-bottom: 0px;

@@ -1,6 +1,12 @@
 import css from 'styled-jsx/css'
 
 export const longFormSingleStyles = css.global`
+.longform-page {
+  background: #000;
+}
+.longform-page .site-header a, .infoLeft {
+  color: #fff;
+}
 .poster img {
   max-width: 100%;
   max-height: 100vh;
@@ -11,6 +17,7 @@ export const longFormSingleStyles = css.global`
 .articles {
   background: #ed0608;
   padding: 20px;
+  font-size: 20px;
   color: #fff;
 }
 .carousel-inner {
@@ -58,6 +65,9 @@ export const longFormSingleStyles = css.global`
 .section-1 {
   padding: 30px;
 }
+.watch-now-section {
+  font-size: 30px;
+}
 @media (min-width: 415px) {
   .youtube-vids {
     display: grid;
@@ -70,12 +80,15 @@ export const longFormSingleStyles = css.global`
   .section-1 {
     padding: 0 30px 30px;
   }
+  .articles {
+    padding: 30px;
+  }
   .youtube-vids {
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
   }
   .infoLeft {
     width: 60%;
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 79px);
   }
   .poster {
     position: fixed;
@@ -91,9 +104,8 @@ export const longFormSingleStyles = css.global`
     justify-content: center;
   }
   .poster img {
-    max-width: calc(100% - 80px);
-    max-height: calc(100% - 80px);
-    border: 1px solid #2d2d2d;
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
   }
   .watch-now-section {
     display: flex;
