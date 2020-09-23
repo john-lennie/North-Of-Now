@@ -79,6 +79,11 @@ export const longFormSingleStyles = css.global`
   padding: 20px;
 }
 
+.longform-page footer {
+  color: #fff;
+  border-top: 1px solid #2d2d2d;
+}
+
 @media (min-width: 415px) {
   .youtube-vids {
     display: grid;
@@ -102,6 +107,12 @@ export const longFormSingleStyles = css.global`
   .infoLeft {
     width: 60%;
     min-height: calc(100vh - 79px);
+    font-size: 16px;
+  }
+  .type {
+    font-style: italic;
+    color: #999;
+    font-size: 12px;
   }
   .poster {
     position: fixed;

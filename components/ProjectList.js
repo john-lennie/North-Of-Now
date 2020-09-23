@@ -86,6 +86,7 @@ const ProjectList = ({ category, projects }) => {
                   <select onChange={handleTypeChange}>
                     <option value="All">All</option>
                     <option value="Documentary">Documentary</option>
+                    <option value="Short Film">Short Film</option>
                   </select>
                 ) : (
                   <select onChange={handleTypeChange}>

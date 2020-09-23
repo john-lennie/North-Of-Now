@@ -42,7 +42,7 @@ const MenuLinks = ({ menu }) => {
 
 const MenuLink = ({ menuLink }) => (
   <li>
-    <DocLink link={menuLink.link}>
+    <DocLink linkClass={RichText.asText(menuLink.label)} link={menuLink.link}>
       {RichText.asText(menuLink.label)}
     </DocLink>
   </li>
