@@ -17,7 +17,6 @@ export const longFormSingleStyles = css.global`
 .articles {
   background: #ed0608;
   padding: 20px;
-  font-size: 20px;
   color: #fff;
 }
 .carousel-inner {
@@ -63,11 +62,19 @@ export const longFormSingleStyles = css.global`
   height: 100%;
 }
 .section-1 {
-  padding: 30px;
+  border-bottom: 1px solid #2d2d2d;
+  padding: 20px;
 }
+
 .watch-now-section {
-  font-size: 30px;
+  display: flex;
+  padding: 20px;
 }
+
+.watch-list {
+  margin-left: 20px;
+}
+
 @media (min-width: 415px) {
   .youtube-vids {
     display: grid;
@@ -82,6 +89,7 @@ export const longFormSingleStyles = css.global`
   }
   .articles {
     padding: 30px;
+    font-size: 18px;
   }
   .youtube-vids {
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
@@ -108,10 +116,8 @@ export const longFormSingleStyles = css.global`
     max-height: calc(100% - 50px);
   }
   .watch-now-section {
-    display: flex;
-  }
-  .watch-list {
-    margin-left: 30px;
+    padding: 30px;
+    font-size: 30px;
   }
   footer {
     width: 60%;

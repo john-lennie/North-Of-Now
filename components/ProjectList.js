@@ -110,8 +110,8 @@ const ProjectList = ({ category, projects }) => {
             </div>
             <div className="meta">
               <h2 className="title">{project.data.title}</h2>
-              <p className="grey">{project.data.type}</p>
-              <p className="grey">{project.data.date}</p>
+              <p>{project.data.type}</p>
+              <p>{project.data.date}</p>
             </div>
           </div>
         ))}

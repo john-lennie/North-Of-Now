@@ -10,6 +10,7 @@ import { Client } from 'utils/prismicHelpers'
 const Page = ({ doc, menu }) => {
   if (doc && doc.uid === "they-fight") {
     return (
+      <DefaultLayout>
         <div className="longform-page">
           <Header menu={menu} logoColor="white" />
             <div className="poster">
@@ -57,7 +58,7 @@ const Page = ({ doc, menu }) => {
                 ))}
               </Carousel>
               {doc.data.watch_now_links.length > 1 ?
-                <div className="watch-now-section pad-30">
+                <div className="watch-now-section">
                   <p>Watch Now On:</p>
                   <ul className="watch-list">
                     {doc.data.watch_now_links.map((link, index) => (
@@ -69,6 +70,7 @@ const Page = ({ doc, menu }) => {
             </div>
                     <style jsx global>{longFormSingleStyles}</style>
           </div>
+      </DefaultLayout>
     )
   }
   if (doc && doc.uid !== "they-fight") {

@@ -25,22 +25,25 @@ export const projectListStyles = css.global`
 .project-thumb {
 }
 .project-thumb .meta {
-  font-size: 11px;
   box-sizing: border-box;
+  display: grid;
+  text-transform: uppercase;
+  grid-template-columns: 60% 40%;
 }
 .meta h2.title {
-  margin-bottom: 2px;
-  font-size: 13px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  text-transform: uppercase;
   font-weight: 300;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .meta p {
   margin-bottom: 0px;
-}
-.meta .grey {
-  margin-right: 5px;
+  text-align: right;
 }
 .project-img {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .project-img a {
   display: inline-block;
@@ -52,15 +55,8 @@ export const projectListStyles = css.global`
   border-radius: 2px;
   float: right;
 }
-.long-form-project-thumbs .project-thumb {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.long-form-project-thumbs .project-img, .long-form-project-thumbs .meta {
-  width: 50%;
-}
 .long-form-project-thumbs .project-img a img {
-  height: auto;
+    height: auto;
 }
 .project-img iframe {
   width: 100%;
