@@ -75,6 +75,7 @@ const Page = ({ doc, menu }) => {
   }
   if (doc && doc.uid !== "they-fight") {
     return (
+      <DefaultLayout>
           <div className="longform-page">
             <Header menu={menu} logoColor="white" />
             <div className="poster">
@@ -96,6 +97,7 @@ const Page = ({ doc, menu }) => {
             </div>
             <style jsx global>{longFormSingleStyles}</style>
           </div>
+        </DefaultLayout>
     )}
   // Call the standard error page if the document was not found
   return null;
