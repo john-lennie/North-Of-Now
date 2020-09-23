@@ -34,7 +34,7 @@ export const projectListStyles = css.global`
   margin-bottom: 0px;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
   grid-row-start: 1;
   grid-row-end: 3;
 }
@@ -89,6 +89,20 @@ export const projectListStyles = css.global`
     grid-row-start: 1;
     grid-row-end: span 2;
     grid-column-start: 2;
+  }
+  .long-form-project-thumbs .project-thumb {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .long-form-project-thumbs .project-img, .long-form-project-thumbs .meta {
+    width: 50%;
+    display: block;
+  }
+  .long-form-project-thumbs .meta p {
+    text-align: left;
+  }
+  .long-form-project-thumbs .project-img a img {
+    height: auto;
   }
   .project-thumbs-container {
     padding: 20px;
