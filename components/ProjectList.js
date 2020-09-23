@@ -99,21 +99,18 @@ const ProjectList = ({ category, projects }) => {
       </div>
       <div className={form === "long-form" ? "long-form-project-thumbs" : "short-form-project-thumbs"}>
         {projectList.map((project, index) => (
-          <div className="project-thumb" key={index}>
-            <div className="project-img">
-              <DocLink link={ `/projects/${form}/${project.uid}` }>
-                <img
-                  src={project.data.thumbnail.url}
-                  alt={project.data.thumbnail.alt}
-                />
-              </DocLink>
-            </div>
+          <DocLink linkClass="project-thumb" key={index} link={ `/projects/${form}/${project.uid}` }>
+            <img
+              className="project-img"
+              src={project.data.thumbnail.url}
+              alt={project.data.thumbnail.alt}
+            />
             <div className="meta">
               <h2 className="title">{project.data.title}</h2>
               <p>{project.data.type}</p>
               <p>{project.data.date}</p>
             </div>
-          </div>
+          </DocLink>
         ))}
       </div>
       <style jsx global>{projectListStyles}</style>

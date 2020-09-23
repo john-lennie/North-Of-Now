@@ -22,8 +22,6 @@ export const projectListStyles = css.global`
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 20px;
 }
-.project-thumb {
-}
 .project-thumb .meta {
   box-sizing: border-box;
   display: grid;
@@ -45,17 +43,13 @@ export const projectListStyles = css.global`
 .project-img {
   margin-bottom: 5px;
 }
-.project-img a {
-  display: inline-block;
-}
-.project-img a img {
+.project-img {
   object-fit: cover;
   width: 100%;
   height: 250px;
   border-radius: 2px;
-  float: right;
 }
-.long-form-project-thumbs .project-img a img {
+.long-form-project-thumbs .project-img {
     height: auto;
 }
 .project-img iframe {
