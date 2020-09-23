@@ -34,7 +34,7 @@ export const homeBannerStyles = css.global`
 }
 .carousel-item.active {
   opacity: 1;
-  transition: .4s ease-in;
+  transition: .5s ease-in;
   transform: translateY(0);
   background: #000;
 }
