@@ -21,7 +21,9 @@ const Page = ({ doc, menu }) => {
           <div className="section-1">
             <h1>{doc.data.title}</h1>
             <p className="type">{doc.data.type}</p>
-            {RichText.render(doc.data.write_up, DocLink)}
+            {doc.data.write_up > 0 ?
+              {RichText.render(doc.data.write_up, DocLink)}
+            : ''}
           </div>
           {doc.data.trailer_embed.length > 0 ?
             <div className="youtube-vids">
