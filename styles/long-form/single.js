@@ -75,9 +75,14 @@ export const longFormSingleStyles = css.global`
   margin-left: 20px;
 }
 
+.youtube-vids {
+  padding: 20px;
+}
+
 @media (min-width: 415px) {
   .youtube-vids {
     display: grid;
+    padding: 30px;
     grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
     grid-gap: 30px;
     background: #000;

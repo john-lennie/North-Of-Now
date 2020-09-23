@@ -29,7 +29,7 @@ const Page = ({ doc, menu }) => {
                 {/* <ClickToReveal title="Full Summary" content="vev" />
                 <ClickToReveal title="Credits" content="vev" /> */}
               </div>
-              <div className="youtube-vids pad-30">
+              <div className="youtube-vids">
                 <div className="responsive-iframe">
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/eYiEr6iwOb8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
