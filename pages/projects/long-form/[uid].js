@@ -21,7 +21,7 @@ const Page = ({ doc, menu }) => {
             <div className="section-1">
               <h1>{doc.data.title}</h1>
               <p className="type">{doc.data.type}</p>
-              {doc.data.write_up ?
+              {doc.data.write_up[0].text.length > 0 ?
                 <div>{RichText.render(doc.data.write_up, DocLink)}</div>
               : ''}
             </div>
@@ -31,7 +31,7 @@ const Page = ({ doc, menu }) => {
                 </div>
               </div>
             : ''}
-            {doc.data.article_links[0] ?
+            {doc.data.article_links[0].text.length > 0 ?
               <div style={{background: doc.data.highlight_color}} className="articles">
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
@@ -75,7 +75,7 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 1, // In seconds
+    revalidate: 1 // In seconds
   }
 }
 
