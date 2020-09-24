@@ -22,7 +22,9 @@ const Page = ({ doc, menu }) => {
               <h1>{doc.data.title}</h1>
               <p className="type">{doc.data.type}</p>
               {(doc.data.write_up && doc.data.write_up[0].text.length > 0) ?
-                <div>{RichText.render(doc.data.write_up, DocLink)}</div>
+                <div>
+                  {RichText.render(doc.data.write_up, DocLink)}
+                </div>
               : ''}
             </div>
             {doc.data.trailer_embed.length > 0 ?
@@ -31,10 +33,12 @@ const Page = ({ doc, menu }) => {
                 </div>
               </div>
             : ''}
-            {(doc.data.article_links && doc.data.article_links[0].text.length > 0) ?
-              <div style={{background: doc.data.highlight_color}} className="articles">
-                {RichText.render(doc.data.article_links, DocLink)}
-              </div>
+            {doc.data.article_links ?
+              (doc.data.article_links[0].text.length > 0 ?
+                <div style={{background: doc.data.highlight_color}} className="articles">
+                  {RichText.render(doc.data.article_links, DocLink)}
+                </div>
+              : '')
             : ''}
             {(doc.data.watch_now_links && doc.data.watch_now_links.watch_link) ?
               <div className="watch-now-section">
