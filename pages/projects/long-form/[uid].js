@@ -25,12 +25,12 @@ const Page = ({ doc, menu }) => {
                 <div>{RichText.render(doc.data.write_up, DocLink)}</div>
               : ''}
             </div>
-            {doc.data.trailer_embed.length > 0 ?
+            {/* {doc.data.trailer_embed.length > 0 ?
               <div className="youtube-vids">
                 <div className="responsive-iframe" dangerouslySetInnerHTML={{ __html: doc.data.trailer_embed[0].text }}>
                 </div>
               </div>
-            : ''}
+            : ''} */}
             {doc.data.article_links && doc.data.article_links[0].text.length > 0 ?
               <div style={{background: doc.data.highlight_color}} className="articles">
                 {RichText.render(doc.data.article_links, DocLink)}
