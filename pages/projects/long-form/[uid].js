@@ -19,24 +19,24 @@ const Page = ({ doc, menu }) => {
           </div>
           <div className="infoLeft">
             <div className="section-1">
-              {/* <h1>{doc.data.title}</h1> */}
-              {/* <p className="type">{doc.data.type}</p> */}
-              {/* {doc.data.write_up ?
+              <h1>{doc.data.title}</h1>
+              <p className="type">{doc.data.type}</p>
+              {doc.data.write_up ?
                 <div>{RichText.render(doc.data.write_up, DocLink)}</div>
-              : ''} */}
+              : ''}
             </div>
-            {/* {doc.data.trailer_embed.length > 0 ?
+            {doc.data.trailer_embed.length > 0 ?
               <div className="youtube-vids">
                 <div className="responsive-iframe" dangerouslySetInnerHTML={{ __html: doc.data.trailer_embed[0].text }}>
                 </div>
               </div>
-            : ''} */}
-            {/* {doc.data.article_links[0].type ?
+            : ''}
+            {doc.data.article_links[0].type ?
               <div style={{background: doc.data.highlight_color}} className="articles">
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
-            : ''} */}
-            {/* {doc.data.watch_now_links.watch_link ?
+            : ''}
+            {doc.data.watch_now_links.watch_link ?
               <div className="watch-now-section">
                 <p>Watch Now On:</p>
                 <ul className="watch-list">
@@ -45,7 +45,7 @@ const Page = ({ doc, menu }) => {
                   ))}
                 </ul>
               </div>
-            : "" } */}
+            : "" }
           </div>
         <style jsx global>{longFormSingleStyles}</style>
         <Footer logoColor="white" />
