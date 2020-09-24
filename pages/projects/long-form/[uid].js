@@ -31,12 +31,12 @@ const Page = ({ doc, menu }) => {
               </div>
             </div>
           : ''}
-          {doc.data.article_links.length > 0 ?
+          {doc.data.article_links[0].type ?
             <div style={{background: doc.data.highlight_color}} className="articles">
               {RichText.render(doc.data.article_links, DocLink)}
             </div>
           : ''}
-          {doc.data.images[1] ?
+          {doc.data.images.image ?
             <Carousel fade={true} pause={false} interval={5000} nextLabel={''} prevLabel={''}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>
@@ -52,7 +52,7 @@ const Page = ({ doc, menu }) => {
               ))}
             </Carousel>
           : ''}
-          {doc.data.watch_now_links.length > 1 ?
+          {doc.data.watch_now_links.watch_link ?
             <div className="watch-now-section">
               <p>Watch Now On:</p>
               <ul className="watch-list">
