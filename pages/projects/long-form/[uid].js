@@ -9,6 +9,7 @@ import { Client } from 'utils/prismicHelpers'
 
 const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
+    console.log(doc.data.article_links.length);
     return (
       <div className="longform-page">
         <Header menu={menu} logoColor="white" />
@@ -33,7 +34,7 @@ const Page = ({ doc, menu }) => {
                 </div>
               </div>
             : ''}
-            {doc.data.article_links.length > 0 ?
+            {(doc.data.article_links && doc.data.article_links[0].text.length > 0) ?
               <div style={{background: doc.data.highlight_color}} className="articles">
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
