@@ -36,7 +36,7 @@ const Page = ({ doc, menu }) => {
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
             : ''}
-            {doc.data.watch_now_links.watch_link.url ?
+            {doc.data.watch_now_links && doc.data.watch_now_links.length > 0 ?
               <div className="watch-now-section">
                 <p>Watch Now On:</p>
                 <ul className="watch-list">
