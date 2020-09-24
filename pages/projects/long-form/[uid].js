@@ -12,14 +12,14 @@ const Page = ({ doc, menu }) => {
     <div className="longform-page">
       <Header menu={menu} logoColor="white" />
         <div className="poster">
-          <img
+          {/* <img
             src={doc.data.thumbnail.url}
-          />
+          /> */}
         </div>
         <div className="infoLeft">
           <div className="section-1">
-            <h1>{doc.data.title}</h1>
-            <p className="type">{doc.data.type}</p>
+            {/* <h1>{doc.data.title}</h1> */}
+            {/* <p className="type">{doc.data.type}</p> */}
             {/* {doc.data.write_up ?
               <div>{RichText.render(doc.data.write_up, DocLink)}</div>
             : ''} */}
