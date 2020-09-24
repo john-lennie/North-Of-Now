@@ -21,7 +21,7 @@ const Page = ({ doc, menu }) => {
           <div className="section-1">
             <h1>{doc.data.title}</h1>
             <p className="type">{doc.data.type}</p>
-            {doc.data.write_up.length > 0 ?
+            {doc.data.write_up ?
               <div>{RichText.render(doc.data.write_up, DocLink)}</div>
             : ''}
           </div>
