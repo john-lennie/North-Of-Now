@@ -36,7 +36,7 @@ const Page = ({ doc, menu }) => {
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
             : ''}
-            {doc.data.watch_now_links.watch_link ?
+            {doc.data.watch_now_links.watch_link.url ?
               <div className="watch-now-section">
                 <p>Watch Now On:</p>
                 <ul className="watch-list">
