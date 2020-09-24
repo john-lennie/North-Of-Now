@@ -21,7 +21,7 @@ const Page = ({ doc, menu }) => {
             <div className="section-1">
               <h1>{doc.data.title}</h1>
               <p className="type">{doc.data.type}</p>
-              {doc.data.write_up && doc.data.write_up[0].text.length > 0 ?
+              {(doc.data.write_up && doc.data.write_up[0].text.length > 0) ?
                 <div>{RichText.render(doc.data.write_up, DocLink)}</div>
               : ''}
             </div>
@@ -31,12 +31,12 @@ const Page = ({ doc, menu }) => {
                 </div>
               </div>
             : ''}
-            {doc.data.article_links && doc.data.article_links.text.length > 0 ?
+            {(doc.data.article_links && doc.data.article_links[0].text.length > 0) ?
               <div style={{background: doc.data.highlight_color}} className="articles">
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
             : ''}
-            {doc.data.watch_now_links && doc.data.watch_now_links.length > 0 ?
+            {(doc.data.watch_now_links && doc.data.watch_now_links.watch_link) ?
               <div className="watch-now-section">
                 <p>Watch Now On:</p>
                 <ul className="watch-list">
