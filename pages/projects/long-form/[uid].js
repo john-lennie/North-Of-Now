@@ -44,7 +44,11 @@ const Page = ({ doc, menu }) => {
                 <p>Watch Now On:</p>
                 <ul className="watch-list">
                   {doc.data.watch_now_links.map((link, index) => (
-                    <li key={index}><a target={link.watch_link.target === "_blank" ? "_blank" : "_self"} href={link.watch_link.url}>{link.link_label}</a></li>
+                    <li key={index}>
+                      <a
+                        style={{color: doc.data.highlight_color}}
+                        target={link.watch_link.target === "_blank" ? "_blank" : "_self"} href={link.watch_link.url}>{link.link_label}</a>
+                    </li>
                   ))}
                 </ul>
               </div>
