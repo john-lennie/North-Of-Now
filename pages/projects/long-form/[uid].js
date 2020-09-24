@@ -35,22 +35,6 @@ const Page = ({ doc, menu }) => {
               {RichText.render(doc.data.article_links, DocLink)}
             </div>
           : ''} */}
-          {doc.data.images.image ?
-            <Carousel fade={true} pause={false} interval={5000} nextLabel={''} prevLabel={''}>
-              {doc.data.images.map((image, index) => (
-                <Carousel.Item key={index}>
-                  <img
-                    src={image.image.url}
-                    alt="image"
-                  />
-                  {/* <Carousel.Caption>
-                    <h3>{image.title}</h3>
-                    <p>{image.sub_title}</p>
-                  </Carousel.Caption> */}
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          : ''}
           {/* {doc.data.watch_now_links.watch_link ?
             <div className="watch-now-section">
               <p>Watch Now On:</p>
