@@ -99,7 +99,7 @@ export const longFormSingleStyles = css.global`
   }
   .articles {
     padding: 30px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .youtube-vids {
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
