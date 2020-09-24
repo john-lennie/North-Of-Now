@@ -14,7 +14,6 @@ const Page = ({ doc, menu }) => {
         <div className="poster">
           <img
             src={doc.data.thumbnail.url}
-            alt={doc.data.thumbnail.alt}
           />
         </div>
         <div className="infoLeft">
