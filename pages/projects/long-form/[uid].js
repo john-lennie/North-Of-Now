@@ -12,9 +12,9 @@ const Page = ({ doc, menu }) => {
     <div className="longform-page">
       <Header menu={menu} logoColor="white" />
         <div className="poster">
-          {/* <img
+          <img
             src={doc.data.thumbnail.url}
-          /> */}
+          />
         </div>
         <div className="infoLeft">
           <div className="section-1">
