@@ -194,12 +194,6 @@ figure[data-fullscreen=true] .controls .progress {
     width: 50%;
     line-height: 1.6em;
   }
-}
-@media (min-width: 768px) {
-  .controls {
-      border-top: none;
-      backdrop-filter: none;
-  }
   .ctr-desc.hidden {
     background: #00000000;
   }
@@ -208,6 +202,12 @@ figure[data-fullscreen=true] .controls .progress {
       left: -20px;
       padding: 20px;
       background: #000000c2;
+  }
+}
+@media (min-width: 768px) {
+  .controls {
+      border-top: none;
+      backdrop-filter: none;
   }
 }
 `
