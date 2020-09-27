@@ -182,15 +182,6 @@ figure[data-fullscreen=true] .controls .progress {
     font-size: 24px;
     line-height: 1.4em;
 }
-.ctr-desc.hidden {
-  background: #00000000;
-}
-.ctr-desc {
-    width: 100%;
-    left: -20px;
-    padding: 20px;
-    background: #000000c2;
-}
 @media (max-width: 768px) {
   video {
     width: 100vw;
@@ -208,6 +199,15 @@ figure[data-fullscreen=true] .controls .progress {
   .controls {
       border-top: none;
       backdrop-filter: none;
+  }
+  .ctr-desc.hidden {
+    background: #00000000;
+  }
+  .ctr-desc {
+      width: 100%;
+      left: -20px;
+      padding: 20px;
+      background: #000000c2;
   }
 }
 `
