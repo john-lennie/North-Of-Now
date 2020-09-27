@@ -190,10 +190,6 @@ figure[data-fullscreen=true] .controls .progress {
     object-fit: contain;
     background: #000;
   }
-  h1 {
-    width: 50%;
-    line-height: 1.6em;
-  }
   .ctr-desc.hidden {
     background: #00000000;
   }

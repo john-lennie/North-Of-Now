@@ -3,7 +3,6 @@ import css from 'styled-jsx/css'
 export const clickToRevealStyles = css.global`
   .ctr-title {
     cursor: pointer;
-    margin-bottom: 20px;
     text-decoration: underline;
   }
   .ctr-desc.hidden {
