@@ -209,5 +209,8 @@ figure[data-fullscreen=true] .controls .progress {
       border-top: none;
       backdrop-filter: none;
   }
+  .ctr-desc {
+      width: 50%;
+  }
 }
 `
