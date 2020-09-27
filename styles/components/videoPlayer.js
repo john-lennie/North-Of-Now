@@ -25,6 +25,7 @@ video {
 }
 .controls {
     position: fixed;
+    z-index: 3;
     bottom: 0;
     width: 100%;
     padding: 20px;
