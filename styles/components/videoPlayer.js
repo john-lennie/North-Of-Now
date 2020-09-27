@@ -196,6 +196,7 @@ figure[data-fullscreen=true] .controls .progress {
   .ctr-desc {
       width: 100%;
       left: -20px;
+      min-height: 50vh;
       padding: 20px;
       background: #000000c2;
   }
