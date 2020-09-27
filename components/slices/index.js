@@ -1,3 +1,4 @@
+export { default as ClickToReveal } from './ClickToReveal'
 export { default as TextSection } from './TextSection'
 export { default as Quote } from './Quote'
 export { default as FullWidthImage } from './FullWidthImage'

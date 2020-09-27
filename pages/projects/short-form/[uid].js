@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import DefaultLayout from 'layouts'
-import { DocLink, Header, ClickToReveal } from 'components'
+import { DocLink, Header, ClickToReveal, SliceZone } from 'components'
 import { queryRepeatableDocuments } from 'utils/queries'
 import { Client } from 'utils/prismicHelpers'
 import { projectListStyles, videoPlayerStyles } from 'styles'
@@ -39,20 +39,8 @@ const Page = ({ doc, menu }) => {
                 <h1>{doc.data.title}</h1>
                 <p> {doc.data.type}</p>
                 <p><span className="fw500">Release Date:</span> {doc.data.date}</p>
-                {doc.data.credits.length > 1 ?
-                  <div>
-                    <p className="fw500">Credits:</p>
-                    <p>Directed By: <span className="fw500">{doc.data.credits[0].directed_by}</span><br/>
-                       Produced By: <span className="fw500">{doc.data.credits[0].produced_by}</span>
-                    </p>
-                  </div>
-                : ""}
               </div>
-              {(doc.data.info && doc.data.info[0].text.length > 0) ?
-                <div className="description">
-                  <ClickToReveal title="Info" content={RichText.render(doc.data.info, DocLink)} />
-                </div>
-              : ""}
+              <SliceZone sliceZone={doc.data.body} />
             </div>
             <div id="video-controls" className="controls">
                <span className="button" id="playpause" data-state="play"></span>

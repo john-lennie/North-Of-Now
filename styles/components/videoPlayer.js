@@ -172,7 +172,6 @@ figure[data-fullscreen=true] .controls .progress {
 #short-form-project {
   position: relative;
   color: #fff;
-  display: inline-block;
   transition: opacity 0.7s ease-in-out;
 }
 #short-form-project .meta p {

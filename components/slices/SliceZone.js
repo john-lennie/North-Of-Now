@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  ClickToReveal,
   TextSection,
   Quote,
   FullWidthImage,
@@ -8,9 +9,11 @@ import {
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
-  <div className="container">
+  <div>
     {sliceZone.map((slice, index) => {
       switch (slice.slice_type) {
+        case ('click_to_reveal'):
+          return <ClickToReveal slice={slice} key={`slice-${index}`} />
         case ('text_section'):
           return <TextSection slice={slice} key={`slice-${index}`} />
         case ('quote'):

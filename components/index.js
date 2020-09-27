@@ -1,4 +1,3 @@
-export { default as ClickToReveal } from './ClickToReveal'
 export { default as DocLink } from './DocLink'
 export { default as Header } from './Header'
 export { default as HomeBanner } from './HomeBanner'
