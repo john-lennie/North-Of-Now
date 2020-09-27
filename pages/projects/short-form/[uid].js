@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import DefaultLayout from 'layouts'
-import { Header, ClickToReveal } from 'components'
+import { DocLink, Header, ClickToReveal } from 'components'
 import { queryRepeatableDocuments } from 'utils/queries'
 import { Client } from 'utils/prismicHelpers'
 import { projectListStyles, videoPlayerStyles } from 'styles'
@@ -48,9 +48,9 @@ const Page = ({ doc, menu }) => {
                   </div>
                 : ""}
               </div>
-              {doc.data.description[0].paragraph ?
+              {(doc.data.info && doc.data.info[0].text.length > 0) ?
                 <div className="description">
-                  <ClickToReveal title="Info" content={doc.data.description} />
+                  <ClickToReveal title="Info" content={RichText.render(doc.data.info, DocLink)} />
                 </div>
               : ""}
             </div>

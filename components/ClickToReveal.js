@@ -7,9 +7,8 @@ const ClickToReveal = ({ title, content }) => {
     <div className="ctr">
       <div onClick={() => setHideText(prevHideText => !prevHideText)} className="ctr-title">{title}</div>
       <div className={!hideText ? "ctr-desc hidden" : "ctr-desc"}>
-        {content.map((element, index) => (
-          <p key={index}>{element.paragraph}</p>
-        ))}</div>
+        {content}
+      </div>
       <style jsx global>{clickToRevealStyles}</style>
     </div>
   )
