@@ -176,7 +176,7 @@ figure[data-fullscreen=true] .controls .progress {
   transition: opacity 0.7s ease-in-out;
 }
 #short-form-project .meta p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #short-form-project .meta p.title {
     font-size: 24px;
@@ -197,7 +197,7 @@ figure[data-fullscreen=true] .controls .progress {
       width: 100%;
       left: -20px;
       min-height: 50vh;
-      padding: 20px;
+      padding: 10px 20px;
       background: #000000c2;
   }
 }

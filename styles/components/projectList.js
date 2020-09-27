@@ -66,7 +66,7 @@ export const projectListStyles = css.global`
   transition: opacity 0.7s ease-in-out;
 }
 #short-form-project .meta p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 #short-form-project .meta p.title {
     font-size: 24px;
