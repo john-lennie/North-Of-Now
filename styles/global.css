@@ -168,6 +168,17 @@ footer {
     bottom: 5px;
   }
 
+  #short-form-project .ctr-desc.hidden {
+    background: #00000000;
+  }
+  #short-form-project .ctr-desc {
+      width: 100%;
+      left: -20px;
+      min-height: 50vh;
+      padding: 10px 20px;
+      background: #000000c2;
+  }
+
 }
 
 @media (min-width: 768px) {

@@ -166,7 +166,7 @@ figure[data-fullscreen=true] .controls .progress {
 .controls .button[data-state="mute"]:after {
   content: "Mute";
 }
-.description {
+.ctr-desc {
   margin-bottom: 100px;
 }
 #short-form-project {
@@ -188,16 +188,6 @@ figure[data-fullscreen=true] .controls .progress {
     padding-bottom: 76px;
     object-fit: contain;
     background: #000;
-  }
-  .ctr-desc.hidden {
-    background: #00000000;
-  }
-  .ctr-desc {
-      width: 100%;
-      left: -20px;
-      min-height: 50vh;
-      padding: 10px 20px;
-      background: #000000c2;
   }
 }
 @media (min-width: 768px) {
