@@ -168,7 +168,6 @@ figure[data-fullscreen=true] .controls .progress {
 }
 .description {
   margin-bottom: 100px;
-  line-height: 1.6em;
 }
 #short-form-project {
   position: relative;
@@ -182,6 +181,15 @@ figure[data-fullscreen=true] .controls .progress {
 #short-form-project .meta p.title {
     font-size: 24px;
     line-height: 1.4em;
+}
+.ctr-desc.hidden {
+  background: #00000000;
+}
+.ctr-desc {
+    width: 100%;
+    left: -20px;
+    padding: 20px;
+    background: #000000c2;
 }
 @media (max-width: 768px) {
   video {

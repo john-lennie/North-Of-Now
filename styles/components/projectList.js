@@ -51,6 +51,7 @@ export const projectListStyles = css.global`
 }
 .long-form-project-thumbs .project-img {
     height: auto;
+    align-self: flex-start;
 }
 .project-img iframe {
   width: 100%;
