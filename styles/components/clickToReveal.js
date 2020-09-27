@@ -16,6 +16,7 @@ export const clickToRevealStyles = css.global`
   .ctr-desc {
     position: relative;
     top: 0;
+    padding: 15px 0px;
     height: auto;
     opacity: 1;
     transition: all 0.3s ease-in-out;
