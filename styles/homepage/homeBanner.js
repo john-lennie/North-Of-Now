@@ -14,7 +14,7 @@ export const homeBannerStyles = css.global`
   background: #000;
 }
 .carousel-item {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
   transform: translateY(5px);
