@@ -36,7 +36,7 @@ const Page = ({ doc, menu }) => {
             : ''}
             {(doc.data.article_links && doc.data.article_links[0].text.length > 0) ?
               <div style={{background: doc.data.highlight_color}} className="articles">
-                <h2>Reviews:</h2>
+                <h2>Reviews</h2>
                 {RichText.render(doc.data.article_links, DocLink)}
               </div>
             : ''}
