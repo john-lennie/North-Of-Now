@@ -18,6 +18,11 @@ export const longFormSingleStyles = css.global`
   background: #ed0608;
   padding: 20px;
   color: #fff;
+  text-transform: uppercase;
+}
+.articles h2 {
+  text-transform: uppercase;
+  font-size: 30px;
 }
 .carousel-inner {
     position: relative;
