@@ -17,12 +17,12 @@ export const homeBannerStyles = css.global`
   position: fixed;
   width: 100%;
   z-index: 1;
-  transform: translateY(100vh);
+  transform: translateY(5px);
   backface-visibility: hidden;
   background: #0000;
   opacity: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   padding: 59px 20px 80px;
@@ -40,7 +40,6 @@ export const homeBannerStyles = css.global`
 }
 .carousel-item img {
   height: 100%;
-  width: 100%;
   object-fit: contain;
 }
 .carousel-caption {
