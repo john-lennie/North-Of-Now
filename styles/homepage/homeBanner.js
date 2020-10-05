@@ -31,6 +31,9 @@ export const homeBannerStyles = css.global`
 }
 .carousel-item a {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carousel-item.active {
   opacity: 1;
