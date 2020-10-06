@@ -202,7 +202,7 @@ figure[data-fullscreen=true] .controls .progress {
       backdrop-filter: none;
   }
   .ctr-desc {
-      width: 50%;
+      max-width: 50%;
   }
 }
 `
