@@ -60,9 +60,6 @@ video {
   font-family: inherit;
   margin-bottom: 10px;
 }
-.controls .button#fs {
-  display: none;
-}
 .controls .floatR .button {
   margin-left: 10px;
 }
@@ -174,6 +171,14 @@ figure[data-fullscreen=true] .controls .progress {
   position: relative;
   color: #fff;
   transition: opacity 0.7s ease-in-out;
+}
+#short-form-project .ctr-desc.hidden div {
+  display: none;
+}
+#short-form-project div {
+  display: inline-block;
+  float: left;
+  clear: both
 }
 #short-form-project .meta p {
   margin-bottom: 10px;

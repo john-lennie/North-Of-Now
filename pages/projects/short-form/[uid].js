@@ -32,7 +32,6 @@ const Page = ({ doc, menu }) => {
                <span className="button" id="playpause" data-state="play"></span>
                <div className="floatR">
                  <span className="button" id="mute" data-state="unmute"></span>
-                 <span className="button" id="fs" data-state="go-fullscreen"></span>
                </div>
                <div className="progress">
                   <progress id="progress" value="0" min="0">

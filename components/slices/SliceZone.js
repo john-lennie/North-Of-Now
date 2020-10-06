@@ -9,7 +9,7 @@ import {
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
-  <div>
+  <span>
     {sliceZone.map((slice, index) => {
       switch (slice.slice_type) {
         case ('click_to_reveal'):
@@ -28,7 +28,7 @@ const SliceZone = ({ sliceZone }) => (
           return null
       }
     })}
-  </div>
+  </span>
 )
 
 export default SliceZone

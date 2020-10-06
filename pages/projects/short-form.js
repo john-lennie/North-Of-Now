@@ -1,12 +1,11 @@
 import React from 'react'
 import Prismic from 'prismic-javascript'
 import DefaultLayout from 'layouts'
-import { Header, ProjectList, SliceZone } from 'components'
+import { Header, ProjectList } from 'components'
 
 import { Client } from 'utils/prismicHelpers'
 
 const ShortFormPage = ({ doc, menu }) => {
-  console.log(doc.results.length);
   if (doc && doc.results) {
     return (
       <DefaultLayout>
