@@ -15,7 +15,7 @@ export const longFormSingleStyles = css.global`
   margin-bottom: 0;
 }
 .articles {
-  background: #ed0608;
+  background: #000;
   padding: 20px;
   color: #fff;
 }
@@ -50,7 +50,7 @@ export const longFormSingleStyles = css.global`
     display: block;
 }
 .watch-list li a {
-  color: #ed0608;
+  color: #fff;
 }
 .youtube-vids {
   background: #000;

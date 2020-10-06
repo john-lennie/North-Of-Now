@@ -1,15 +1,11 @@
 import Head from 'next/head'
 import React from 'react'
-import DefaultLayout from 'layouts'
-import { DocLink, Header, ClickToReveal, SliceZone } from 'components'
+import { Header, SliceZone } from 'components'
 import { queryRepeatableDocuments } from 'utils/queries'
 import { Client } from 'utils/prismicHelpers'
-import { projectListStyles, videoPlayerStyles } from 'styles'
-import { RichText } from 'prismic-reactjs';
-import { linkResolver } from 'prismic-configuration'
+import { videoPlayerStyles } from 'styles'
 
 const Page = ({ doc, menu }) => {
-
   if (doc && doc.data) {
     return (
         <div>
@@ -22,16 +18,6 @@ const Page = ({ doc, menu }) => {
             <figure id="videoContainer" data-fullscreen="false">
               <video id="video" autoPlay loop muted playsInline>
                 <source src={doc.data.vimeo_mp4_url} type="video/mp4" />
-                {/* <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-                <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"> */}
-                {/* <!-- Flash fallback --> */}
-                {/* <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-                  <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-                  <param name="allowfullscreen" value="true" />
-                  <param name="wmode" value="transparent" />
-                  <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-                  <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
-                </object> */}
               </video>
             </figure>
             <div id="short-form-project" className="container">
@@ -58,21 +44,15 @@ const Page = ({ doc, menu }) => {
         </div>
     )
   }
-
   // Call the standard error page if the document was not found
   return null;
 }
 
-
 export async function getStaticProps({ params, preview = null, previewData = {} }) {
-
   const { ref } = previewData
-
   const client = Client()
-
   const doc = await client.getByUID('short_form_project_page', params.uid, ref ? { ref } : null) || {}
   const menu = await client.getSingle('menu', ref ? { ref } : null) || {}
-
   return {
     props: {
       doc,

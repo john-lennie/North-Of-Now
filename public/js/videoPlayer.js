@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   (function () {
     'use strict';
 
+    // get viewport width
     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
+    // if width > 768, hide text after 5 seconds, show immediatedly on mousemove, then hide again after 10 seconds
     if (viewportWidth > 768) {
       var infoText = document.getElementById('short-form-project');
       var timeout;
 
-      setTimeout(function(){
+      setTimeout(function() {
         infoText.classList.toggle("hidden");
       }, 5000);
 
