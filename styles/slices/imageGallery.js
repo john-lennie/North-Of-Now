@@ -103,7 +103,7 @@ export const imageGalleryStyles = css.global`
 }
 .close {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   right: 30px;
   top: 30px;
   text-transform: uppercase;
