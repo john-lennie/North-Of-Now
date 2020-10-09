@@ -7,6 +7,8 @@ export const headerStyles = css.global`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100vh;
+  backdrop-filter: blur(50px) brightness(100%);
 }
 .short-form-page .site-header a {
   color: #fff;
