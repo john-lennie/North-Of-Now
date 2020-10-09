@@ -26,13 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
             infoText.classList.toggle("hidden");
           } else {
             if (!onText) {
-              console.log("not on text");
               timeout = setTimeout(function() {
                 infoText.classList.toggle("hidden");
               }, 5000);
-            }
-            if (onText) {
-              console.log("on text");
             }
           }
         });
