@@ -1,6 +1,8 @@
-// import App from 'next/app'
+// global css files
 import '../styles/global.css'
 import '../styles/reset.css'
+
+// import App from 'next/app'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
