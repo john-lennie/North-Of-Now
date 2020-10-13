@@ -6,7 +6,7 @@ import { DocLink } from 'components'
 import { headerStyles } from 'styles'
 
 const Header = ({ menu, logoColor }) => (
-  <header className="site-header">
+  <header id="head" className="site-header">
     <NextLink href="/">
       <a>
         <div className="logo">

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 import Prismic from 'prismic-javascript'
 import DefaultLayout from 'layouts'
@@ -17,6 +18,9 @@ const ShortFormPage = ({ doc, menu }) => {
 
     return (
       <DefaultLayout>
+        <Head>
+          <title>Still | North of Now</title>
+        </Head>
         <Header menu={menu} logoColor={"dark"} />
         <div className="container stills-container">
           {doc.results.map((result, index) => (

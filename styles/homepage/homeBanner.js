@@ -5,8 +5,6 @@ export const homeBannerStyles = css.global`
     background: none;
     position: fixed;
     width: 100%;
-    height: -webkit-fill-available;
-    backdrop-filter: blur(50px) brightness(100%);
 }
 .homepage .site-header a {
   color: #fff;

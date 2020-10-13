@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
         var infoText = document.getElementById('short-form-project');
         var timeout;
         setTimeout(function() {
-          infoText.classList.toggle("hidden");
+          if (!onText) {
+            infoText.classList.toggle("hidden");
+          }
         }, 5000);
         document.addEventListener('mousemove', e => {
           clearTimeout(timeout);

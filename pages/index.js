@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 
 import DefaultLayout from 'layouts'
@@ -9,6 +10,9 @@ const HomePage = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
       <DefaultLayout>
+        <Head>
+          <title>North of Now</title>
+        </Head>
         <div className='homepage'>
           <Header menu={menu} logoColor="white" />
           <HomeBanner slides={doc.data.slides} />

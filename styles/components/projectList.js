@@ -110,7 +110,7 @@ export const projectListStyles = css.global`
     display: flex;
     justify-content: flex-end;
     padding-bottom: 0px;
-    margin-top: -49px;
+    margin-top: -39px;
     float: right;
   }
 }

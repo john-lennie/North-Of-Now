@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 import Prismic from 'prismic-javascript'
 import DefaultLayout from 'layouts'
@@ -9,6 +10,9 @@ const LongFormPage = ({ doc, menu }) => {
   if (doc && doc.results) {
     return (
       <DefaultLayout>
+        <Head>
+          <title>Long Form | North of Now</title>
+        </Head>
         <Header menu={menu} logoColor={"dark"} />
         <ProjectList category="long-form" projects={doc.results} />
       </DefaultLayout>

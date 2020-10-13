@@ -11,6 +11,7 @@ const Page = ({ doc, menu }) => {
         <div>
           <style jsx global>{videoPlayerStyles}</style>
           <Head>
+            <title>{doc.data.title} | North of Now</title>
             <script type="text/javascript" src="/js/videoPlayer.js"></script>
           </Head>
           <div className="short-form-page">

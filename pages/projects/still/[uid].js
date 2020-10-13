@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 
 import DefaultLayout from 'layouts'
@@ -14,6 +15,9 @@ const Page = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
         <div>
+          <Head>
+            <title>{doc.data.title} | North of Now</title>
+          </Head>
           <Header menu={menu} />
             <DocLink link="/projects/still" linkClass="close">Close X</DocLink>
             <h1 className="title">{doc.data.title}</h1>
