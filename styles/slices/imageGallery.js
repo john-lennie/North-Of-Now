@@ -108,7 +108,8 @@ export const imageGalleryStyles = css.global`
   top: 30px;
   text-transform: uppercase;
   font-size: 13px;
-  color: #000;
+  mix-blend-mode: difference;
+  color: #fff;
 }
 .title {
   position: fixed;
@@ -121,7 +122,6 @@ export const imageGalleryStyles = css.global`
   font-weight: 300;
   mix-blend-mode: difference;
   color: #fff;
-  background: #6b666600;
 }
 .carousel {
   position: fixed;
