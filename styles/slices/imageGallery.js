@@ -1,6 +1,9 @@
 import css from 'styled-jsx/css'
 
 export const imageGalleryStyles = css.global`
+.site-header {
+  display: none;
+}
 .carousel {
   position: relative;
   background: #fff;
