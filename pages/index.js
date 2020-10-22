@@ -1,23 +1,36 @@
 import Head from 'next/head'
 import React from 'react'
-
-import DefaultLayout from 'layouts'
 import { Header, HomeBanner } from 'components'
+import { homeBannerStyles } from 'styles'
 
 import { Client } from 'utils/prismicHelpers'
 
 const HomePage = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
-      <DefaultLayout>
-        <Head>
-          <title>North of Now</title>
-        </Head>
-        <div className='homepage'>
-          <Header menu={menu} logoColor="white" />
-          <HomeBanner slides={doc.data.slides} />
+        <div>
+          <Head>
+            <title>North of Now</title>
+            <script type="text/javascript" src="/js/index.js"></script>
+          </Head>
+          <div className='homepage'>
+            <Header menu={menu} />
+            <div className="slide-container">
+              {doc.data.slides.map((slide, index) => (
+                <div
+                  className="slide"
+                  style={index === (doc.data.slides.length - 1) ? { position: `relative`, opacity: `1`} : {}}
+                  key={index}>
+                  <img
+                    className="slide-img"
+                    src={slide.image.url}
+                  />
+                  <span className="slide-tooltip">{slide.title}</span>
+                </div>
+              ))}</div>
+          </div>
+          <style jsx global>{homeBannerStyles}</style>
         </div>
-      </DefaultLayout>
     )
   }
 

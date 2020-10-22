@@ -31,14 +31,11 @@ export const headerStyles = css.global`
   height: 19px;
   padding: 20px;
 }
-
 .site-header a {
+  display: inline-block;
   color: #000;
   text-transform: uppercase;
   font-weight: 300;
-}
-.site-header a {
-  display: inline-block;
 }
 .site-header nav a:hover {
   text-decoration: underline;
@@ -70,9 +67,6 @@ export const headerStyles = css.global`
   }
   .homepage .logo-b {
     display: none;
-  }
-  .homepage .site-header a {
-    color: #fff;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {

@@ -1,13 +1,47 @@
 import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
+.slide-container {
+   height: 10000px;
+}
+.slide {
+  height: 100vh;
+}
+.slide {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding: 59px;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+}
+.slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.slide:hover .slide-tooltip {
+    display: block;
+}
+.slide-tooltip {
+  display: none;
+  font-size: 3vw;
+  margin-top: -4vw;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 1000;
+}
+.scrolling {
+  position: absolute;
+  top: 100vh;
+  z-index: 1;
+  opacity: 1;
+}
 .homepage .site-header {
     background: none;
     position: fixed;
     width: 100%;
-}
-.homepage .site-header a {
-  color: #fff;
 }
 .carousel-inner {
   height: 100vh;
@@ -69,6 +103,22 @@ export const homeBannerStyles = css.global`
 }
 footer {
   display: none !important;
+}
+@media (max-width: 768px) {
+  .slide {
+    background: #fff;
+  }
+  .slide-tooltip {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    z-index: 1000;
+  }
 }
 @media (min-width: 768px) {
   .carousel-inner {
