@@ -8,8 +8,10 @@ export const homeBannerStyles = css.global`
   height: 100vh;
 }
 .slide {
+  display: block;
   position: fixed;
   top: 0;
+  background: #fff;
   height: 100vh;
   padding: 59px;
   box-sizing: border-box;
@@ -30,7 +32,10 @@ export const homeBannerStyles = css.global`
   margin-top: -4vw;
   text-transform: uppercase;
   position: fixed;
+  font-weight: 300;
   z-index: 1000;
+  mix-blend-mode: difference;
+  color: #fff;
 }
 .scrolling {
   position: absolute;
