@@ -146,8 +146,9 @@ export const imageGalleryStyles = css.global`
     left: 0;
     width: 100%;
   }
-  .title, .close {
-    display: none;
+  .title {
+    top: 30px;
+    left: 30px;
   }
 
   .carousel-item, .carousel-item img {
