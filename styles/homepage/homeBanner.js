@@ -1,6 +1,9 @@
 import css from 'styled-jsx/css'
 
 export const homeBannerStyles = css.global`
+.homepage {
+  max-height: -webkit-fill-available;
+}
 .homepage .site-header {
     background: none;
     position: fixed;
