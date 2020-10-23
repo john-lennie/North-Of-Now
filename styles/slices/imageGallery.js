@@ -149,6 +149,7 @@ export const imageGalleryStyles = css.global`
   .title {
     top: 30px;
     left: 30px;
+    bottom: unset;
   }
 
   .carousel-item, .carousel-item img {
