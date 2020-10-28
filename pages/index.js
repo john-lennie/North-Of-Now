@@ -74,7 +74,7 @@ const HomePage = ({ doc, menu }) => {
           <div className='homepage'>
             <Header menu={menu} logoColor="white" />
             <div className="slide-container">
-              <span id="slide-tooltip">Title</span>
+              <span id="slide-tooltip">{doc.data.slides[doc.data.slides.length-1].title}</span>
               {doc.data.slides.map((slide, index) => (
                 <DocLink
                   key={index}

@@ -20,8 +20,10 @@ export const homeBannerStyles = css.global`
   object-fit: contain;
 }
 #slide-tooltip {
-  font-size: 5vw;
-  margin-top: -8vw;
+  font-size: 4vw;
+  margin-top: -7vw;
+  width: fit-content;
+  transform: translateX(-50%);
   text-transform: uppercase;
   position: fixed;
   font-weight: 700;
@@ -108,13 +110,13 @@ footer {
   .slide {
   }
   #slide-tooltip {
-    display: none;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 0;
     width: 100%;
     text-align: center;
     font-size: 12px;
+    transform: translateX(0px);
     text-transform: uppercase;
     z-index: 1000;
   }
