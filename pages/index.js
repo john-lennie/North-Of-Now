@@ -34,7 +34,7 @@ const HomePage = ({ doc, menu }) => {
       toolTip.innerText = "";
     });
 
-    slideContainer[0].style.height = "" + (slides.length * window.innerHeight)  + "px";
+    slideContainer[0].style.height = "" + (slides.length * (window.innerHeight + 50))  + "px";
 
     window.addEventListener('scroll', function(e) {
       for (var i = 0; i < slides.length; i++) {

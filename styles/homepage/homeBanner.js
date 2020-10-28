@@ -108,7 +108,7 @@ footer {
 }
 @media (max-width: 768px) {
   .slide {
-    padding: 120px 59px 59px;
+    padding: 120px 59px 0px;
 }
   #slide-tooltip {
     position: fixed;
