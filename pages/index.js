@@ -91,6 +91,7 @@ const HomePage = ({ doc, menu }) => {
       for (var i = 0; i < slides.length; i++) {
         // toolTip.innerText = slides[slides.length - 1].firstElementChild.dataset.title;
         slides[currentSlide].style.transform = "scale(" + scaleCounter + ")"
+        toolTip.innerText = slides[currentSlide].firstElementChild.dataset.title;
         if (i === currentSlide) {
           slides[currentSlide].style.opacity = "1";
         } else {
@@ -115,7 +116,7 @@ const HomePage = ({ doc, menu }) => {
           <div className='homepage'>
             <Header menu={menu} logoColor="white" />
             <div className="slide-container">
-              <span id="slide-tooltip">{doc.data.slides[0].title}</span>
+              <span id="slide-tooltip">{doc.data.slides[doc.data.slides.length - 1].title}</span>
               {doc.data.slides.map((slide, index) => (
                 <DocLink
                   key={index}
