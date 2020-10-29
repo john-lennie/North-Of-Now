@@ -93,7 +93,7 @@ const HomePage = ({ doc, menu }) => {
         slides[currentSlide].style.transform = "scale(" + scaleCounter + ")"
         toolTip.innerText = slides[currentSlide].firstElementChild.dataset.title;
         if (i === currentSlide) {
-          slides[currentSlide].style.display = "block";
+          slides[currentSlide].style.display = "flex";
         } else {
           slides[i].style.display = "none";
         }
@@ -122,7 +122,7 @@ const HomePage = ({ doc, menu }) => {
                   key={index}
                   link={slide.slide_link.type === "short_form_project_page" ? `projects/short-form/${slide.slide_link.slug}` : (slide.slide_link.type === "long_form_project_page" ? `projects/long-form/${slide.slide_link.slug}` : `projects/still/${slide.slide_link.slug}`)}
                   linkClass="slide"
-                  inlineStyles={index === (doc.data.slides.length - 1) ? {display: 'block'} : {}}
+                  inlineStyles={index === (doc.data.slides.length - 1) ? {display: 'flex'} : {}}
                   >
                   <img
                     data-title={slide.title}

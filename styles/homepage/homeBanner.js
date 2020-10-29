@@ -8,6 +8,8 @@ export const homeBannerStyles = css.global`
 .slide {
   position: fixed;
   display: none;
+  align-items: center;
+  justify-content: center;
   height: calc(100vh - 300px);
   width: 100%;
   margin: 150px 0;
@@ -114,7 +116,10 @@ footer {
   }
   .slide {
     height: -webkit-fill-available;
-    margin: 100px 0 150px;
+    margin: 0px;
+  }
+  .slide img {
+    width: 60%;
   }
 }
 @media (min-width: 768px) {
