@@ -20,6 +20,8 @@ const HomePage = ({ doc, menu }) => {
         scaleCounter = '1',
         scrollRange = '0';
 
+    slideContainer[0].style.height = "" + (slides.length * 2000) + "px";
+
     function showToolTip(e) {
         toolTip.style.left = e.clientX + 'px';
         toolTip.style.top = e.clientY + 'px';
@@ -41,12 +43,29 @@ const HomePage = ({ doc, menu }) => {
     window.addEventListener('scroll', function(e) {
 
       if (window.scrollY < 1999) {
+        currentSlide = slides.length - 1;
         scrollRange = window.scrollY.toString();
       }
 
-      if (window.scrollY >= 1999) {
+      // scrollRange gets reset to 0 so that it never is > 1999
+      if (window.scrollY >= 1999 && window.scrollY <= 3999) {
         currentSlide = slides.length - 2;
         scrollRange = (window.scrollY - 2000).toString();
+      }
+
+      if (window.scrollY > 3999 && window.scrollY <= 5999) {
+        currentSlide = slides.length - 3;
+        scrollRange = (window.scrollY - 4000).toString();
+      }
+
+      if (window.scrollY > 5999 && window.scrollY <= 7999) {
+        currentSlide = slides.length - 4;
+        scrollRange = (window.scrollY - 6000).toString();
+      }
+
+      if (window.scrollY > 7999 && window.scrollY <= 9999) {
+        currentSlide = slides.length - 5;
+        scrollRange = (window.scrollY - 8000).toString();
       }
 
       if (scrollRange <= 9) {

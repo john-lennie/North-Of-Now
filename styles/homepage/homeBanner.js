@@ -4,7 +4,6 @@ export const homeBannerStyles = css.global`
 .slide-container {
    background: #000;
    overflow: hidden;
-   height: 7000px;
 }
 .slide {
   position: fixed;
