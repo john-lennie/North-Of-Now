@@ -3,16 +3,18 @@ import css from 'styled-jsx/css'
 export const homeBannerStyles = css.global`
 .slide-container {
    background: #000;
+   overflow: hidden;
 }
 .slide {
-  display: block;
-  position: fixed;
-  top: 0;
-  height: -webkit-fill-available;
-  padding: 59px;
-  box-sizing: border-box;
+  display: inline-block;
+  transition: all .2s;
+  height: calc(100vh - 200px);
   width: 100%;
+  margin: 100px 0;
   cursor: pointer;
+}
+.slide:hover {
+  transform: scale(1.05);
 }
 .slide img {
   height: 100%;
@@ -30,12 +32,6 @@ export const homeBannerStyles = css.global`
   z-index: 1000;
   mix-blend-mode: difference;
   color: #fff;
-}
-.scrolling {
-  position: absolute;
-  top: 100vh;
-  z-index: 1;
-  opacity: 1;
 }
 .homepage .site-header {
     background: none;

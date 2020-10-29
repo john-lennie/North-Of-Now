@@ -34,26 +34,20 @@ const HomePage = ({ doc, menu }) => {
       toolTip.innerText = "";
     });
 
-    slideContainer[0].style.height = "" + (slides.length * (window.innerHeight + 50))  + "px";
-
+    // on scroll
     window.addEventListener('scroll', function(e) {
+      console.log(slides[slides.length-1].getBoundingClientRect().bottom);
       for (var i = 0; i < slides.length; i++) {
-        if (slides[i].getBoundingClientRect().bottom > (window.innerHeight / 2) && i === (slides.length - 1)) {
-          toolTip.innerText = slides[slides.length - 1].firstElementChild.dataset.title;
+        // if fist slide && bottom is in view
+        if (i === 0 && slides[i].getBoundingClientRect().bottom > 0) {
+          // set tooltip text of first slide
+          toolTip.innerText = slides[0].firstElementChild.dataset.title;
         }
-        if (i >= 1) {
-          if (slides[i].getBoundingClientRect().bottom < 59 && slides[i].getBoundingClientRect().bottom > -(window.innerHeight / 2)) {
-            // console.log(slides[i - 1].firstElementChild.dataset.title, "is in view");
-            toolTip.innerText = slides[i - 1].firstElementChild.dataset.title;
-          }
-        }
-        if (slides[i].getBoundingClientRect().bottom < 0 && i > 1) {
-          slides[i - 1].classList.add("scrolling");
-          slides[i - 1].style.top = "" + (slides.length - i)  + "00vh";
-        }
-        if (slides[i].getBoundingClientRect().bottom >= window.innerHeight - 120) {
-          slides[i].classList.remove("scrolling");
-          slides[i].style.top = null;
+        // if bottom is above screen && less than -100vh
+        if (slides[i].getBoundingClientRect().bottom <= (window.innerHeight / 3) && slides[i].getBoundingClientRect().bottom > -(window.innerHeight)) {
+          console.log(slides[i + 1].firstElementChild.dataset.title, "is in view");
+          // set tooltip to next slide title
+          toolTip.innerText = slides[i + 1].firstElementChild.dataset.title;
         }
       }
     })
@@ -80,7 +74,6 @@ const HomePage = ({ doc, menu }) => {
                   key={index}
                   link={slide.slide_link.type === "short_form_project_page" ? `projects/short-form/${slide.slide_link.slug}` : (slide.slide_link.type === "long_form_project_page" ? `projects/long-form/${slide.slide_link.slug}` : `projects/still/${slide.slide_link.slug}`)}
                   linkClass="slide"
-                  inlineStyles={index === (doc.data.slides.length - 1) ? { position: `absolute`, opacity: `1`} : {}}
                   >
                   <img
                     data-title={slide.title}
