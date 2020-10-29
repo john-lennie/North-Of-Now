@@ -15,7 +15,10 @@ const HomePage = ({ doc, menu }) => {
         slideImages = document.getElementsByClassName('slide-img'),
         toolTip = document.getElementById('slide-tooltip'),
         scrollPos = document.scrollTop,
-        header = document.getElementById('head');
+        header = document.getElementById('head'),
+        currentSlide = slides.length - 1,
+        scaleCounter = '1',
+        scrollRange = '0';
 
     function showToolTip(e) {
         toolTip.style.left = e.clientX + 'px';
@@ -36,18 +39,43 @@ const HomePage = ({ doc, menu }) => {
 
     // on scroll
     window.addEventListener('scroll', function(e) {
-      console.log(slides[slides.length-1].getBoundingClientRect().bottom);
+
+      if (window.scrollY < 1999) {
+        scrollRange = window.scrollY.toString();
+      }
+
+      if (window.scrollY >= 1999) {
+        currentSlide = slides.length - 2;
+        scrollRange = (window.scrollY - 2000).toString();
+      }
+
+      if (scrollRange <= 9) {
+        scaleCounter = '1.00' + scrollRange;
+      }
+      if (scrollRange > 9 && scrollRange < 99) {
+        scaleCounter = '1.0' + scrollRange;
+      }
+      if (scrollRange > 99 && scrollRange < 999) {
+        scaleCounter = '1.' + scrollRange;
+      }
+      if (scrollRange > 999 && scrollRange < 1009) {
+        scaleCounter = '2.' + scrollRange.slice(-3);
+      }
+      if (scrollRange > 1009 && scrollRange < 1099) {
+        scaleCounter = '2.' + scrollRange.slice(-3);
+      }
+      if (scrollRange > 1099 && scrollRange < 1999) {
+        scaleCounter = '2.' + scrollRange.slice(-3);
+      }
+      console.log(currentSlide);
+
       for (var i = 0; i < slides.length; i++) {
-        // if fist slide && bottom is in view
-        if (i === 0 && slides[i].getBoundingClientRect().bottom > 0) {
-          // set tooltip text of first slide
-          toolTip.innerText = slides[0].firstElementChild.dataset.title;
-        }
-        // if bottom is above screen && less than -100vh
-        if (slides[i].getBoundingClientRect().bottom <= (window.innerHeight / 3) && slides[i].getBoundingClientRect().bottom > -(window.innerHeight)) {
-          console.log(slides[i + 1].firstElementChild.dataset.title, "is in view");
-          // set tooltip to next slide title
-          toolTip.innerText = slides[i + 1].firstElementChild.dataset.title;
+        // toolTip.innerText = slides[slides.length - 1].firstElementChild.dataset.title;
+        slides[currentSlide].style.transform = "scale(" + scaleCounter + ")"
+        if (i === currentSlide) {
+          slides[currentSlide].style.opacity = "1";
+        } else {
+          slides[i].style.opacity = "0";
         }
       }
     })
@@ -68,12 +96,13 @@ const HomePage = ({ doc, menu }) => {
           <div className='homepage'>
             <Header menu={menu} logoColor="white" />
             <div className="slide-container">
-              <span id="slide-tooltip">{doc.data.slides[doc.data.slides.length-1].title}</span>
+              <span id="slide-tooltip">{doc.data.slides[0].title}</span>
               {doc.data.slides.map((slide, index) => (
                 <DocLink
                   key={index}
                   link={slide.slide_link.type === "short_form_project_page" ? `projects/short-form/${slide.slide_link.slug}` : (slide.slide_link.type === "long_form_project_page" ? `projects/long-form/${slide.slide_link.slug}` : `projects/still/${slide.slide_link.slug}`)}
                   linkClass="slide"
+                  inlineStyles={index === (doc.data.slides.length - 1) ? {opacity: 1} : {}}
                   >
                   <img
                     data-title={slide.title}

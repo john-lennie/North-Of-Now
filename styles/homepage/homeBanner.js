@@ -4,17 +4,17 @@ export const homeBannerStyles = css.global`
 .slide-container {
    background: #000;
    overflow: hidden;
+   height: 7000px;
 }
 .slide {
+  position: fixed;
   display: inline-block;
-  transition: all .2s;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 120px);
   width: 100%;
-  margin: 100px 0;
+  opacity: 0;
+  tansition: opacity 0.5s;
+  margin: 60px 0;
   cursor: pointer;
-}
-.slide:hover {
-  transform: scale(1.05);
 }
 .slide img {
   height: 100%;
@@ -104,9 +104,6 @@ footer {
   display: none !important;
 }
 @media (max-width: 768px) {
-  .slide {
-    padding: 120px 59px 0px;
-}
   #slide-tooltip {
     position: fixed;
     bottom: 20px;
