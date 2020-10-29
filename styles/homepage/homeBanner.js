@@ -112,6 +112,10 @@ footer {
     text-transform: uppercase;
     z-index: 1000;
   }
+  .slide {
+    height: -webkit-fill-available;
+    margin: 100px 0 150px;
+  }
 }
 @media (min-width: 768px) {
   .carousel-inner {
