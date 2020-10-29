@@ -7,11 +7,9 @@ export const homeBannerStyles = css.global`
 }
 .slide {
   position: fixed;
-  display: inline-block;
+  display: none;
   height: calc(100vh - 300px);
   width: 100%;
-  opacity: 0;
-  tansition: opacity 0.5s;
   margin: 150px 0;
   cursor: pointer;
 }
