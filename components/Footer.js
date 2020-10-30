@@ -11,8 +11,8 @@ const Footer = ({ logoColor }) => (
       North Of Now Productions
     </div>
     <div className="footer-right">
-      @northofnowfilms<br/>
-      info@northofnow.com
+      <a href="https://www.instagram.com/northofnowfilms/" target="_blank">@northofnowfilms</a><br/>
+      <a href="mailto:info@northofnow.com">info@northofnow.com</a>
     </div>
     <style jsx global>{footerStyles}</style>
   </footer>

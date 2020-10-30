@@ -13,6 +13,7 @@ footer {
 }
 .footer-right {
   text-align: right;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   footer {

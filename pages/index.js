@@ -43,8 +43,9 @@ const HomePage = ({ doc, menu }) => {
 
     // on scroll listener
     window.addEventListener('scroll', function(e) {
-      // FOR each slide
-      for (var i = 1; i <= slides.length; i++) {
+
+      // start for loop
+      for (var i = 0; i < slides.length; i++) {
         // if scroll position is less than 999
         if (window.scrollY < 999) {
           // set currentSlide to last array index
@@ -52,33 +53,35 @@ const HomePage = ({ doc, menu }) => {
           scrollRange = window.scrollY.toString();
         }
         // if scroll position >= && <= a range which increments by a thousand
-        if (window.scrollY >= (999+1000*(i-2)) && window.scrollY <= (999+1000*(i-1))) {
+        if (i !== 0 && window.scrollY >= (999+1000*(i-1)) && window.scrollY < (999+1000*(i))) {
           // set currentSlide
-          currentSlide = slides.length - i;
+          currentSlide = slides.length - (i + 1);
           // subtract min of range to keep scrollRange between 0 and 1000
-          scrollRange = (window.scrollY - 1000*(i-1)).toString();
+          scrollRange = (window.scrollY - 1000*(i)).toString();
         }
-      }
-      // set scaleValue by appending scrollRange which is always between 0 and 1000
-      if (scrollRange <= 9) {
-        scaleValue = '1.00' + scrollRange;
-      }
-      if (scrollRange > 9 && scrollRange < 99) {
-        scaleValue = '1.0' + scrollRange;
-      }
-      if (scrollRange > 99 && scrollRange < 999) {
-        scaleValue = '1.' + scrollRange;
-      }
-      // FOR each slide
-      for (var i = 0; i < slides.length; i++) {
-        slides[currentSlide].style.transform = "scale(" + scaleValue + ")";
-        toolTip.innerText = slides[currentSlide].firstElementChild.dataset.title;
+        // set slide visible or not
         if (i === currentSlide) {
           slides[currentSlide].style.display = "flex";
         } else {
           slides[i].style.display = "none";
         }
+        // set scaleValue by appending scrollRange which is always between 0 and 1000
+        if (scrollRange <= 9) {
+          scaleValue = '1.00' + scrollRange;
+        }
+        if (scrollRange > 9 && scrollRange <= 99) {
+          scaleValue = '1.0' + scrollRange;
+        }
+        if (scrollRange > 99 && scrollRange < 999) {
+          scaleValue = '1.' + scrollRange;
+        }
+        // set scale value
+        slides[currentSlide].style.transform = "scale(" + scaleValue + ")";
+        // set tooltip title
+        toolTip.innerText = slides[currentSlide].firstElementChild.dataset.title;
       }
+      // end for loop
+
     })
     // end scroll listener
 

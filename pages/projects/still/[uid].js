@@ -18,10 +18,10 @@ const Page = ({ doc, menu }) => {
           <Head>
             <title>{doc.data.title} | North of Now</title>
           </Head>
-          <Header menu={menu} />
-            <DocLink link="/projects/still" linkClass="close">Close</DocLink>
+          <Header logoColor="white" menu={menu} />
+            {/* <DocLink link="/projects/still" linkClass="close">All Stills</DocLink> */}
             <h1 className="title">{doc.data.title}</h1>
-            <Carousel fade={true} pause={false} interval={60000} nextLabel={''} prevLabel={''}>
+            <Carousel fade={true} pause={false} interval={7000} nextLabel={''} prevLabel={''}>
               {doc.data.images.map((image, index) => (
                 <Carousel.Item key={index}>
                   <img

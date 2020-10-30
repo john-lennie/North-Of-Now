@@ -1,17 +1,18 @@
 import css from 'styled-jsx/css'
 
 export const imageGalleryStyles = css.global`
-.site-header {
-  display: none;
+.site-header a {
+  color: #fff;
 }
 .carousel {
   position: relative;
-  background: #fff;
+  background: #000;
 }
 .carousel-indicators {
   position: fixed;
   bottom: 15px;
   left: 25px;
+  right: 25px;
   mix-blend-mode: difference;
   color: #fff;
   background: #6b666600;
@@ -54,10 +55,12 @@ export const imageGalleryStyles = css.global`
 .carousel-item {
   position: relative;
   float: left;
+  background: #000;
   height: 100%;
   width: 100%;
   margin-right: -100%;
   opacity: 0;
+  transition: opacity .4s;
 }
 .carousel-item.active {
   opacity: 1;
@@ -110,21 +113,20 @@ export const imageGalleryStyles = css.global`
   right: 30px;
   top: 30px;
   text-transform: uppercase;
-  font-size: 13px;
-  color: #000;
+  mix-blend-mode: difference;
+  color: #fff;
 }
 .title {
   position: fixed;
   z-index: 2;
   right: 30px;
-  bottom: 30px;
+  top: 22px;
   text-transform: uppercase;
   font-size: 13px;
   margin-bottom: 0;
   font-weight: 300;
   mix-blend-mode: difference;
   color: #fff;
-  background: #6b666600;
 }
 .carousel {
   position: fixed;
@@ -144,10 +146,19 @@ export const imageGalleryStyles = css.global`
 
   .carousel-indicators {
     left: 0;
+    bottom: 8px;
     width: 100%;
   }
-  .title, .close {
-    display: none;
+  .close {
+    right: 20px;
+    top: 59px;
+  }
+  .title {
+    left: 20px;
+    right: 20px;
+    top: unset;
+    bottom: 46px;
+    text-align: center;
   }
 
   .carousel-item, .carousel-item img {
