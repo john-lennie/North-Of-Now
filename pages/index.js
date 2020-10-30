@@ -124,11 +124,19 @@ const HomePage = ({ doc, menu }) => {
                   linkClass="slide"
                   inlineStyles={index === (doc.data.slides.length - 1) ? {display: 'flex'} : {}}
                   >
-                  <img
-                    data-title={slide.title}
-                    className="slide-img"
-                    src={slide.image.url}
-                  />
+                  {slide.image.url ?
+                    <img
+                      data-title={slide.title}
+                      src={slide.image.url}
+                    /> : ''
+                  }
+                  {slide.vimeo_mp4_url ?
+                    <video
+                      data-title={slide.title}
+                      autoPlay loop muted playsInline>
+                      <source src={slide.vimeo_mp4_url} type="video/mp4" />
+                    </video> : ''
+                  }
                 </DocLink>
               ))}</div>
           </div>

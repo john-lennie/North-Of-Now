@@ -15,7 +15,10 @@ figcaption {
 video {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  background: #000;
+  padding: 60px;
+  box-sizing: border-box;
+  object-fit: contain;
 }
 
 /* controls */

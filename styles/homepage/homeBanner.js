@@ -10,12 +10,12 @@ export const homeBannerStyles = css.global`
   display: none;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 60vh);
   width: 100%;
-  margin: 150px 0;
+  margin: 30vh 0;
   cursor: pointer;
 }
-.slide img {
+.slide img, .slide video {
   height: 100%;
   width: 100%;
   object-fit: contain;
