@@ -9,10 +9,12 @@ const HomePage = ({ doc, menu }) => {
 
   useEffect(() => {
 
+    console.log(doc.data.slides[doc.data.slides.length - 1].title);
+
     var viewportWidth = window.innerWidth || document.documentElement.clientWidth,
         slideContainer = document.getElementsByClassName('slide-container'),
         slides = document.getElementsByClassName('slide'),
-        slideImages = document.getElementsByClassName('slide-img'),
+        slideImagesAndVideos = document.getElementsByClassName('.slide img, .slide video'),
         toolTip = document.getElementById('slide-tooltip'),
         scrollPos = document.scrollTop,
         header = document.getElementById('head'),
@@ -20,26 +22,16 @@ const HomePage = ({ doc, menu }) => {
         scaleCounter = '1',
         scrollRange = '0';
 
+    // set height of container to allow scrolling
     slideContainer[0].style.height = "" + (slides.length * 2000) + "px";
 
+    // set position of toolTip, triggered on mousemove
     function showToolTip(e) {
         toolTip.style.left = e.clientX + 'px';
         toolTip.style.top = e.clientY + 'px';
     }
 
-    for (var i = 0; i < slideImages.length; i++) {
-      let title = slideImages[i].dataset.title;
-      slideImages[i].addEventListener("mouseover", function(){
-        toolTip.innerText = "";
-        toolTip.innerText = title;
-      });
-    }
-
-    header.addEventListener("mouseover", function(){
-      toolTip.innerText = "";
-    });
-
-    // on scroll
+    // on scroll listener
     window.addEventListener('scroll', function(e) {
 
       if (window.scrollY < 1999) {
@@ -47,24 +39,27 @@ const HomePage = ({ doc, menu }) => {
         scrollRange = window.scrollY.toString();
       }
 
-      // scrollRange gets reset to 0 so that it never is > 1999
       if (window.scrollY >= 1999 && window.scrollY <= 3999) {
         currentSlide = slides.length - 2;
+        // scrollRange gets reset to 0 so that it never is > 1999
         scrollRange = (window.scrollY - 2000).toString();
       }
 
       if (window.scrollY > 3999 && window.scrollY <= 5999) {
         currentSlide = slides.length - 3;
+        // scrollRange gets reset to 0 so that it never is > 1999
         scrollRange = (window.scrollY - 4000).toString();
       }
 
       if (window.scrollY > 5999 && window.scrollY <= 7999) {
         currentSlide = slides.length - 4;
+        // scrollRange gets reset to 0 so that it never is > 1999
         scrollRange = (window.scrollY - 6000).toString();
       }
 
       if (window.scrollY > 7999 && window.scrollY <= 9999) {
         currentSlide = slides.length - 5;
+        // scrollRange gets reset to 0 so that it never is > 1999
         scrollRange = (window.scrollY - 8000).toString();
       }
 
@@ -86,7 +81,6 @@ const HomePage = ({ doc, menu }) => {
       if (scrollRange > 1099 && scrollRange < 1999) {
         scaleCounter = '2.' + scrollRange.slice(-3);
       }
-      console.log(currentSlide);
 
       for (var i = 0; i < slides.length; i++) {
         // toolTip.innerText = slides[slides.length - 1].firstElementChild.dataset.title;
@@ -99,9 +93,19 @@ const HomePage = ({ doc, menu }) => {
         }
       }
     })
+    // end scroll listener
 
     if (viewportWidth > 768) {
+      // on mousemove listener
       window.addEventListener('mousemove', showToolTip);
+      // on hover over header listener
+      header.addEventListener("mouseover", function(){
+        toolTip.innerText = "";
+      });
+      // on end hover over header listener
+      header.addEventListener("mouseout", function(){
+        toolTip.innerText = slides[currentSlide].firstElementChild.dataset.title;
+      });
     }
 
   });
