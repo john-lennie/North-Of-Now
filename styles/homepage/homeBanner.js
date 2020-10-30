@@ -30,6 +30,7 @@ export const homeBannerStyles = css.global`
   padding: 59px 20px 80px;
   box-sizing: border-box;
   height: -webkit-fill-available;
+  transition: all .5s ease;
 }
 .carousel-item a {
   overflow: hidden;
