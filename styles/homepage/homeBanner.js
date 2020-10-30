@@ -24,7 +24,7 @@ export const homeBannerStyles = css.global`
   background: #0000;
   opacity: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 59px 20px 80px;
@@ -41,8 +41,9 @@ export const homeBannerStyles = css.global`
   opacity: 1;
   z-index: 2;
 }
-.carousel-item img {
+.carousel-item img, .carousel-item video {
   height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 .carousel-caption {
@@ -85,7 +86,7 @@ footer {
   .carousel-item a {
     display: contents;
   }
-  .carousel-item img {
+  .carousel-item img, .carousel-item video {
     height: 100vh;
   }
   .carousel-caption {
@@ -105,7 +106,7 @@ footer {
   }
 }
 @media (min-width: 1024px) {
-  .carousel-item img {
+  .carousel-item img, .carousel-item video {
     margin-top: 0px;
   }
 
