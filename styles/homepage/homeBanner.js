@@ -104,6 +104,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .homepage .site-header {
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: flex-start;
+  }
   #slide-tooltip {
     position: fixed;
     bottom: 20px;
