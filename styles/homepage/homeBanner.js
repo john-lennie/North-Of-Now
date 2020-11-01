@@ -4,7 +4,6 @@ export const homeBannerStyles = css.global`
 .slide-container {
    background: #000;
    overflow: hidden;
-   margin-top: -59px;
 }
 .slide {
   position: fixed;
@@ -35,7 +34,7 @@ export const homeBannerStyles = css.global`
 }
 .homepage .site-header {
     background: none;
-    position: sticky;
+    position: fixed;
     top: 0px;
     width: 100%;
 }
