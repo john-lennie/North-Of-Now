@@ -37,6 +37,7 @@ export const homeBannerStyles = css.global`
     position: fixed;
     top: 0px;
     width: 100%;
+    -webkit-backface-visibility: hidden;
 }
 .homepage .site-header a {
   color: #fff;
@@ -113,6 +114,7 @@ footer {
     transform: translateX(0px);
     text-transform: uppercase;
     z-index: 1000;
+    -webkit-backface-visibility: hidden;
   }
   .slide {
     height: -webkit-fill-available;
@@ -123,9 +125,6 @@ footer {
   }
 }
 @media (min-width: 768px) {
-  .carousel-inner {
-
-  }
   .carousel-item {
     padding: 0;
     height: 100vh;
