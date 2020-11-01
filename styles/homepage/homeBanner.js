@@ -4,6 +4,7 @@ export const homeBannerStyles = css.global`
 .slide-container {
    background: #000;
    overflow: hidden;
+   margin-top: -59px;
 }
 .slide {
   position: fixed;
@@ -34,10 +35,9 @@ export const homeBannerStyles = css.global`
 }
 .homepage .site-header {
     background: none;
-    position: fixed;
+    position: sticky;
     top: 0px;
     width: 100%;
-    -webkit-backface-visibility: hidden;
 }
 .homepage .site-header a {
   color: #fff;
@@ -103,6 +103,7 @@ export const homeBannerStyles = css.global`
 footer {
   display: none !important;
 }
+
 @media (max-width: 768px) {
   #slide-tooltip {
     position: fixed;
@@ -114,7 +115,6 @@ footer {
     transform: translateX(0px);
     text-transform: uppercase;
     z-index: 1000;
-    -webkit-backface-visibility: hidden;
   }
   .slide {
     height: -webkit-fill-available;
@@ -124,6 +124,7 @@ footer {
     width: 60%;
   }
 }
+
 @media (min-width: 768px) {
   .carousel-item {
     padding: 0;
@@ -151,6 +152,7 @@ footer {
     line-height: 1.4em;
   }
 }
+
 @media (min-width: 1024px) {
   .carousel-item img {
     margin-top: 0px;
