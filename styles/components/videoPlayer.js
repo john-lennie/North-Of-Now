@@ -59,7 +59,7 @@ video {
   background: none;
   border: none;
   padding: 0;
-  font-size: 13px;
+  font-size: 20px;
   font-family: inherit;
   margin-bottom: 10px;
 }
@@ -155,17 +155,20 @@ figure[data-fullscreen=true] .controls li {
 figure[data-fullscreen=true] .controls .progress {
 	width:68%;
 }
+.controls .button[data-state="play"]:after, .controls .button[data-state="pause"]:after, .controls .button[data-state="unmute"]:after, .controls .button[data-state="mute"]:after {
+  font-family: "Material Icons";
+}
 .controls .button[data-state="pause"]:after {
-  content: "Pause";
+  content: "\e034";
 }
 .controls .button[data-state="play"]:after {
-  content: "Play";
+  content: "\e037";
 }
 .controls .button[data-state="unmute"]:after {
-  content: "Unmute";
+  content: "\e04f";
 }
 .controls .button[data-state="mute"]:after {
-  content: "Mute";
+  content: "\e050";
 }
 .ctr-desc {
   margin-bottom: 100px;
