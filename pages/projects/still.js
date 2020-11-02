@@ -28,7 +28,7 @@ const ShortFormPage = ({ doc, menu }) => {
               key={index}
               link={`/projects/still/${result.uid}`}
               linkClass="stills-link"
-              inlineStyles={{ height: height, top: `calc(${getRandomInt(100)}% - 12.5vh)`, left: `${getRandomInt(72)}%`}}
+              inlineStyles={{ height: height, top: `calc(${getRandomInt(100)}% - 25vh)`, left: `${getRandomInt(72)}%`}}
               >
               <img
                 src={result.data.images[0].image.url}
