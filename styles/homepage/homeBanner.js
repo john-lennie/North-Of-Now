@@ -111,7 +111,8 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 12px;
-    transform: translateX(0px);
+    transform: none;
+    margin-top: 0;
     text-transform: uppercase;
     z-index: 1000;
   }
