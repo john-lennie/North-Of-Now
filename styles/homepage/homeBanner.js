@@ -112,6 +112,7 @@ footer {
     text-align: center;
     font-size: 12px;
     transform: none;
+    -webkit-backface-visibility: hidden;
     margin-top: 0;
     text-transform: uppercase;
     z-index: 1000;
