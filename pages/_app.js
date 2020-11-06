@@ -1,3 +1,4 @@
+import Head from 'next/head'
 // global css files
 import '../styles/global.css'
 import '../styles/reset.css'
@@ -5,7 +6,17 @@ import '../styles/reset.css'
 // import App from 'next/app'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="height=device-height,
+                      width=device-width, initial-scale=1.0,
+                      minimum-scale=1.0, maximum-scale=1.0,
+                      user-scalable=no, target-densitydpi=device-dpi" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
