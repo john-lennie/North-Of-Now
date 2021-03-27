@@ -109,7 +109,13 @@ const ProjectList = ({ category, projects }) => {
             <div className="meta">
               <h2 className="title">{project.data.title}</h2>
               <p>{project.data.type}</p>
-              <p>{project.data.date}</p>
+              {
+                form =="long-form" ? (
+                  <p>{project.data.date}</p>
+                ) : (
+                  <p></p>
+                )
+              }
             </div>
           </DocLink>
         ))}

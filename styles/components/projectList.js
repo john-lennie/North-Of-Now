@@ -25,9 +25,9 @@ export const projectListStyles = css.global`
 .project-thumb .meta {
   box-sizing: border-box;
   display: grid;
-  line-height: 1em;
+  line-height: 1.4em;
   text-transform: uppercase;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: auto;
 }
 .meta h2.title {
   margin-bottom: 0px;
@@ -40,7 +40,6 @@ export const projectListStyles = css.global`
 .meta p {
   margin-bottom: 0px;
   font-size: 10px;
-  text-align: right;
 }
 .project-img {
   margin-bottom: 5px;
