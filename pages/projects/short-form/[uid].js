@@ -25,7 +25,6 @@ const Page = ({ doc, menu }) => {
               <div className="meta">
                 <h1>{doc.data.title}</h1>
                 <p> {doc.data.type}</p>
-                <p><span className="fw500">Release Date:</span> {doc.data.date}</p>
               </div>
               <SliceZone sliceZone={doc.data.body} />
             </div>
